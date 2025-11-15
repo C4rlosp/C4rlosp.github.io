@@ -4,30 +4,28 @@ title: "RPKI Ghost: el riesgo invisible en la validación de rutas"
 ---
 
 # RPKI Ghost: el riesgo invisible en la validación de rutas
-**Por Carlos Pérez**
+**Por Carlos Pérez / NIC - CRIX Costa Rica**
 
 Hoy en día, en un entorno donde la IA y los manuales de buenas prácticas están por todas partes, incluso siguiendo las normas de la comunidad podemos caer en una trampa peligrosa: **asumir que la seguridad de RPKI simplemente funciona**.
 
-A esto se suma la mentalidad clásica de *“si funciona, no lo toques”*, muy común entre operadores y administradores.  
+A esto se suma la mentalidad clásica de **“si funciona, no lo toques”** loc cual es muy común entre operadores y administradores.  
 Y entonces surge la pregunta clave:
 
-> **¿Cuántos validadores obsoletos siguen hoy en producción creyendo que protegen la red mientras entregan datos incompletos?**
+> Y entonces sugr la pregunta **¿Cuántos validadores obsoletos están hoy en producción creyendo que protegen la red mientras entregan datos incompletos?**
 
-Aunque parezca improbable, es totalmente plausible que existan ISP —e incluso IXPs— que crean estar protegidos simplemente porque su validador RPKI está encendido, sin errores aparentes y sin alertas visibles.
+Aunque parezca descabellado es totalmente plausible que existan ISP —e incluso IXPs— que creen que estan protegidos simplemente porque su validador RPKI está encendido, sin errores aparentes y sin alertas visibles.
 
-## ⚠️ Un validador desactualizado puede convertirse en un “Ghost”
-Un validador RPKI desactualizado puede seguir funcionando, pero **sin validar correctamente**.  
-Y el operador no se da cuenta.
+> Y justamente ahí es donde nace el problema:
 
-Muchos validadores se instalaron cuando **RSYNC (RFC 9286)** era el método principal.  
-Pero hoy, los RIR —LACNIC, RIPE NCC, APNIC, AFRINIC, ARIN— han migrado a **RRDP (RFC 8210)**, un mecanismo más rápido y eficiente basado en HTTPS.
+## ⚠️ Un validador desactualizado puede convertirse en un “Ghost”: parece que funciona, pero realmente no valida.
 
-El problema:  
-muchos validadores antiguos **no procesan bien RRDP** y siguen dependiendo de RSYNC.
+Muchos operadores configuraron sus validadores hace años, cuando **RSYNC (RFC 9286)** era el método estándar de sincronización. Pero desde entonces los RIR —LACNIC, RIPE NCC, APNIC, AFRINIC, ARIN— han avanzado hacia **RRDP (RFC 8210)**, un mecanismo basado en más HTTPS mucho más rápido, eficiente y menos costoso para los repositorios.
+
+El problema es que muchos **validadores antiguos no procesan correctamente RRDP, y aún siguen dependiendo casi por completo de RSYNC, que hoy en día solo se debería utilizar como un fallback. y lo mas grave **los operadores no se dan cuenta.** 
 
 ---
 
-## 🔍 ¿Qué pasaría si tu validador dejó de validar hace años… pero seguía con sesión “Established”?
+## 🔍 ¿Qué pasaría si tu validador dejó de validar hace años… pero nunca te diste cuenta porque la sesión RTR seguía “Established”?
 Ese es el corazón de **Ghost RPKI**:  
 Un validador aparentemente sano, pero con validación rota y sin síntomas visibles.
 
