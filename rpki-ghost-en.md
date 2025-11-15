@@ -7,7 +7,7 @@ title: "RPKI Ghost: the invisible risk in route validation"
 **By Carlos Pérez / NIC – CRIX Costa Rica**
 
 > 🇪🇸 This article is also available in Spanish:  
-> [RPKI Ghost: el riesgo invisible en la validación de rutas](rpki-ghost.html)
+> [RPKI Ghost: el riesgo invisible en la validación de rutas](rpki-ghost.md)
 
 Today, in an environment where AI and best-practice manuals are everywhere, even when following community standards we can fall into a dangerous trap: **assuming that RPKI security “just works.”**
 
