@@ -34,7 +34,24 @@ Un validador aparentemente sano, pero con validación rota y sin síntomas visib
 ## 📊 Comparación real: FORT v1.0 vs FORT v1.6
 A continuación se ilustran diferencias enormes en la cantidad de ROAs importados y preferidos entre un validador antiguo y uno actualizado.
 
-(💡 Luego subimos tus imágenes aquí usando `/img/...`)
+## 📋 Tablas de BIRD (estado real de los validadores)
+
+![Tablas de BIRD para ROA4 y ROA6](images/rpki_tables.png)
+
+*Figura 3 – Salida real de BIRD mostrando diferencias entre validadores antiguos y actualizados.*
+
+
+## 📊 Comparación de ROAs importados
+
+![ROAs importados por versión de validador](images/rpki_roa_imported_only.png)
+
+*Figura 1 – Comparación del número de ROAs **importados** por FORT v1.0 y v1.6 (IPv4 e IPv6). La versión antigua pierde una gran cantidad de datos debido a soporte incompleto de RRDP.*
+
+## 📊 ROAs importados vs preferidos (comparación completa)
+
+![ROAs importados y preferidos por versión de validador](images/rpki_roa_comparison.png)
+
+*Figura 2 – Comparación entre ROAs importados y ROAs preferidos. FORT v1.0 muestra inconsistencias fuertes que revelan validación degradada (“Ghost RPKI”).*
 
 ---
 
