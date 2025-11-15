@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "RPKI Ghost: el riesgo invisible en la validación de rutas"
+nav_exclude: true
 ---
 
 # RPKI Ghost: el riesgo invisible en la validación de rutas
