@@ -1,0 +1,10 @@
+title: "Carlos Pérez – Blog Técnico"
+description: "Artículos sobre BGP, RPKI, seguridad de enrutamiento, IXPs y operación de redes."
+theme: minima
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-feed
