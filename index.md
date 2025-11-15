@@ -9,8 +9,8 @@ Analizo temas de **BGP**, **RPKI**, **seguridad de enrutamiento**, IXPs, automat
 
 ## 📌 Artículos publicados
 
-- **[RPKI Ghost: el riesgo invisible en la validación de rutas](rpki-ghost.html)**  
-  *Qué pasa cuando un validador RPKI parece funcionar… pero no valida realmente.*
+- 🇪🇸 [RPKI Ghost: el riesgo invisible en la validación de rutas](rpki-ghost.html)  
+- 🇬🇧 [RPKI Ghost: the invisible risk in route validation](rpki-ghost-en.html)
 
 ---
 
