@@ -55,10 +55,30 @@ A continuación se ilustran diferencias enormes en la cantidad de ROAs importado
 
 ---
 
-## 🧩 Conclusión
-Ghost RPKI **no es un fallo exótico**, es un riesgo silencioso causado por falta de actualizaciones.  
-Mantener los validadores al día es esencial para proteger el ecosistema global de enrutamiento.
+## ¿Por qué crees que ocurree esto?
+
+  - Un validador obsoleto:
+    - No interpreta los cambios modernos RRDP
+    - Duplica o procesa mal objetos
+    - Se acumulan estados inconsistentes utilizados solo rsync
+    - No sabe reconocer los objetos introducidos después del 2021
+    - Te da una falsa sensación de seguridad **("Ghost Security")**
 
 ---
+
+## 🧩 Conclusión
+En palabras simples **"Ghost RPKI"** es aquel validador que parece funcionar, pero en realidad esta protegiendo con datos incompletos, corruptos o antiguos.
+
+y ahí es donde caemos en "La falsa seguridad es peor que no tener RPKI", porque cuando todo se ve "UP" en CLI y los validadores no muestra errores, el operador confía, pero ojo si el motor RRDP está roto, si los TALs están desactualizados, o el repositorio no sincroniza, déjame decirte que tu red está tomando decisiones basadas en datos falsos.
+
+El verdadero fantasma es pensar que estas protegido cuando no lo estas.
+
+Para terminar, te dejo estos consejos:
+  - No confíes en que no da errores
+  - No confíes en que "siempre ha funcionado así"
+porque podrías estar tomando decisiones críticas de enrutamiento con información inconsistente. **"RPKI no es un servicio de "Instalar y Olvidar"**
+
+---
+## "El mayor riesgo no es no tener RPKI: es creer que lo tienes, cuando en realidad tu validador es un fantasma."
 
 [⬅ Volver al inicio](index.md)
