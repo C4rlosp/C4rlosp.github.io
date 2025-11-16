@@ -1,3 +1,6 @@
+# ============================
+# LACNIC 43 — ES
+# ============================
 - id: lacnic43
   lang: es
   title: "Participación en sesiones técnicas de enrutamiento en LACNIC 43"
@@ -8,6 +11,22 @@
   external_url: "https://nic.cr/2025/05/29/lacnic-43-y-el-peering-forum-reflexiones-sobre-tendencias-y-desafios-clave-para-el-ecosistema-de-internet-en-la-region/"
   published: true
 
+# ============================
+# LACNIC 43 — EN
+# ============================
+- id: lacnic43-en
+  lang: en
+  title: "Participation in technical routing sessions at LACNIC 43"
+  location: "Fortaleza, Brazil"
+  date: "2025-05"
+  image: "/images/talks/lacnic43.png"
+  description: "Representing NIC Costa Rica and CRIX in technical discussions on BGP, RPKI, IXP deployment and strengthening regional Internet infrastructure."
+  external_url: "https://nic.cr/2025/05/29/lacnic-43-y-el-peering-forum-reflexiones-sobre-tendencias-y-desafios-clave-para-el-ecosistema-de-internet-en-la-region/"
+  published: true
+
+# ============================
+# IGF 2024 — ES
+# ============================
 - id: igf2024
   lang: es
   title: "Moderador en el Foro de Gobernanza de Internet (IGF 2024)"
@@ -18,15 +37,44 @@
   external_url: "https://nic.cr/2024/10/14/dialogo-de-gobernanza-de-internet-2024-un-foro-para-construir-juntos-un-internet-accesible-para-todos/"
   published: true
 
-- id: texastech-security
-  lang: es
-  title: "Charla sobre seguridad global en redes en Texas Tech University"
-  location: "Avenida Escazú, Costa Rica"
-  date: "2025-04-30"
-  image: "/images/talks/texastech.jpg"
-  description: "Presentación sobre amenazas globales en infraestructura de Internet, seguridad en BGP, validación RPKI y resiliencia operativa para redes críticas."
-  external_url: "https://"
+# ============================
+# IGF 2024 — EN
+# ============================
+- id: igf2024-en
+  lang: en
+  title: "Moderator at the Internet Governance Forum (IGF 2024)"
+  location: "San José, Costa Rica"
+  date: "2024-10"
+  image: "/images/talks/igfsep2024.jpg"
+  description: "Moderator of a panel focused on connectivity, routing security and strengthening critical Internet infrastructure at the regional level."
+  external_url: "https://nic.cr/2024/10/14/dialogo-de-gobernanza-de-internet-2024-un-foro-para-construir-juntos-un-internet-accesible-para-todos/"
   published: true
+
+# ============================
+# TEXAS TECH — ES (Comentado)
+# ============================
+ - id: texastech-security
+   lang: es
+   title: "Charla sobre seguridad global en redes en Texas Tech University"
+   location: "Avenida Escazú, Costa Rica"
+   date: "2025-04-30"
+   image: "/images/talks/texastech.jpg"
+   description: "Presentación sobre amenazas globales en infraestructura de Internet, seguridad en BGP, validación RPKI y resiliencia operativa para redes críticas."
+#   external_url: ""  # En espera de enlace oficial
+   published: true
+
+# ============================
+# TEXAS TECH — EN (Comentado)
+# ============================
+ - id: texastech-security-en
+   lang: en
+   title: "Global network security talk at Texas Tech University"
+   location: "Avenida Escazú, Costa Rica"
+   date: "2025-04-30"
+   image: "/images/talks/texastech.jpg"
+   description: "Presentation on global threats to Internet infrastructure, BGP security, RPKI validation and operational resilience for critical networks."
+#   external_url: ""  # Pending official link
+   published: true
 
 - id: lacnic44
   lang: es
