@@ -16,7 +16,7 @@ alt_lang_url: /en/talks/
 
 Aquí encontrarás mis participaciones en eventos, conferencias, foros técnicos y presentaciones internacionales sobre IXPs, BGP, RPKI y operación de redes.
 
-{% assign talks = site.data.talks | where_exp: "t", "t.lang == 'es' and t.published != false and t.published != 'false'" %}
+{% assign talks = site.data.talks | where: "lang", "es" %}
 
 <div class="talks-grid">
   {% for t in talks %}
