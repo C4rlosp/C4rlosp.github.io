@@ -791,3 +791,175 @@ header.site-header .site-nav a:hover {
     color: #8cc4ff;
   }
 }
+/* ==========================================
+   📰 Articles grid – responsive & polished
+   ========================================== */
+
+/* Grid: 1 columna en móvil, 2 en pantallas medianas+ */
+.articles-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .articles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Card base */
+.article-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* Hover suave estilo LinkedIn/LACNIC */
+.article-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.10);
+  border-color: rgba(0,0,0,0.12);
+}
+
+.article-card-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none !important;
+  color: inherit;
+  height: 100%;
+}
+
+/* Miniatura (opcional) */
+.article-thumb {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+}
+
+.article-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Cuerpo del card */
+.article-body {
+  padding: 1.1rem 1.3rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  flex: 1;
+}
+
+/* Meta (categoría + fecha) */
+.article-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+}
+
+.article-category {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #2563eb;
+}
+
+.article-date {
+  color: rgba(0,0,0,0.5);
+}
+
+/* Título */
+.article-title {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* Excerpt */
+.article-excerpt {
+  margin: 0.1rem 0 0.4rem;
+  font-size: 0.9rem;
+  color: rgba(0,0,0,0.68);
+}
+
+/* Footer (tiempo + CTA) */
+.article-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.4rem;
+  font-size: 0.86rem;
+}
+
+.article-readtime {
+  color: rgba(0,0,0,0.55);
+}
+
+.article-cta {
+  font-weight: 600;
+  color: #2563eb;
+  transition: color 0.2s ease;
+}
+
+.article-card:hover .article-cta {
+  color: #1d4ed8;
+}
+
+/* Separador súper tenue y aireado */
+hr {
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  width: 96%;
+  margin: 3rem auto 2rem auto;
+}
+
+/* ===========================
+   🌙 Dark mode automático
+   =========================== */
+@media (prefers-color-scheme: dark) {
+  .article-card {
+    background: #181818;
+    border-color: rgba(255,255,255,0.06);
+    box-shadow: 0 10px 32px rgba(0,0,0,0.7);
+  }
+
+  .article-card:hover {
+    border-color: rgba(255,255,255,0.20);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.85);
+    background-color: #1d1d1d;
+  }
+
+  .article-category {
+    color: #8cc4ff;
+  }
+
+  .article-date,
+  .article-readtime {
+    color: rgba(255,255,255,0.6);
+  }
+
+  .article-excerpt {
+    color: rgba(255,255,255,0.72);
+  }
+
+  .article-cta {
+    color: #8cc4ff;
+  }
+
+  hr {
+    border-top-color: rgba(255,255,255,0.10);
+  }
+}
