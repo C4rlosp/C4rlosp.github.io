@@ -51,30 +51,30 @@
   published: true
 
 # ============================
-# TEXAS TECH — ES (Comentado)
+# TEXAS TECH — ES
 # ============================
- - id: texastech-security
-   lang: es
-   title: "Charla sobre seguridad global en redes en Texas Tech University"
-   location: "Avenida Escazú, Costa Rica"
-   date: "2025-04-30"
-   image: "/images/talks/texastech.jpg"
-   description: "Presentación sobre amenazas globales en infraestructura de Internet, seguridad en BGP, validación RPKI y resiliencia operativa para redes críticas."
-#   external_url: ""  # En espera de enlace oficial
-   published: true
+- id: texastech-security
+  lang: es
+  title: "Charla sobre seguridad global en redes en Texas Tech University"
+  location: "Avenida Escazú, Costa Rica"
+  date: "2025-04-30"
+  image: "/images/talks/texastech.jpg"
+  description: "Presentación sobre amenazas globales en infraestructura de Internet, seguridad en BGP, validación RPKI y resiliencia operativa para redes críticas."
+  # external_url: ""  # En espera de enlace oficial
+  published: true
 
 # ============================
-# TEXAS TECH — EN (Comentado)
+# TEXAS TECH — EN
 # ============================
- - id: texastech-security-en
-   lang: en
-   title: "Global network security talk at Texas Tech University"
-   location: "Avenida Escazú, Costa Rica"
-   date: "2025-04-30"
-   image: "/images/talks/texastech.jpg"
-   description: "Presentation on global threats to Internet infrastructure, BGP security, RPKI validation and operational resilience for critical networks."
-#   external_url: ""  # Pending official link
-   published: true
+- id: texastech-security-en
+  lang: en
+  title: "Global network security talk at Texas Tech University"
+  location: "Avenida Escazú, Costa Rica"
+  date: "2025-04-30"
+  image: "/images/talks/texastech.jpg"
+  description: "Presentation on global threats to Internet infrastructure, BGP security, RPKI validation and operational resilience for critical networks."
+  # external_url: ""  # Pending official link
+  published: true
 
 # ============================
 # LACNIC 44 — ES
@@ -93,7 +93,7 @@
   published: true
 
 # ============================
-# LACNIC 43 — EN
+# LACNIC 44 — EN
 # ============================
 - id: lacnic44-en
   lang: en
