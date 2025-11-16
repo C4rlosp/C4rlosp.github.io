@@ -174,3 +174,33 @@ h1, h2, h3 {
   }
 }
 
+.site-footer .social[aria-label="LinkedIn"] .icon {
+  top: 1px; /* corrige el leve salto visual */
+}
+/* Efectos hover sutiles por marca */
+.site-footer .social[aria-label="LinkedIn"]:hover {
+  color: #0A66C2; /* azul oficial LinkedIn */
+}
+.site-footer .social[aria-label="GitHub"]:hover {
+  color: #24292f; /* gris GitHub */
+}
+.site-footer {
+  margin-top: 2.5rem;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #111;
+    color: #ddd;
+  }
+  header.site-header, .site-footer {
+    background: #181818;
+    border-color: #333;
+  }
+  a {
+    color: #3da9fc;
+  }
+  a:hover {
+    color: #90d1ff;
+  }
+  .divider { border-color: #444; }
+}
