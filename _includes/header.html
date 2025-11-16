@@ -22,6 +22,10 @@
         🧩 {% if page.lang == 'en' %}Projects{% else %}Proyectos{% endif %}
       </a>
 
+      <a href="{% if page.lang == 'en' %}{{ '/en/talks/' | relative_url }}{% else %}{{ '/talks/' | relative_url }}{% endif %}">
+        🎤 {% if page.lang == 'en' %}Talks{% else %}Charlas{% endif %}
+      </a>
+ 
       <!-- Sobre mí / About -->
       <a href="{% if page.lang == 'en' %}{{ '/about-en/' | relative_url }}{% else %}{{ '/about/' | relative_url }}{% endif %}">
         {% if page.lang == 'en' %}About{% else %}Sobre mí{% endif %}
