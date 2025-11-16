@@ -8,7 +8,7 @@ description: "Notas sobre ingeniería de redes, automatización, monitoreo y pee
 
 # 👋 Bienvenido al blog técnico de Carlos Pérez
 
-_Notas sobre ingeniería de redes, automatización, monitoreo y peering._
+> _Notas sobre ingeniería de redes, automatización, monitoreo y peering._
 
 ## 📌 Artículos publicados
 
