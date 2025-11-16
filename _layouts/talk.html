@@ -4,10 +4,6 @@ layout: default
 
 <div class="talk-wrapper">
 
-  {%- comment -%}
-    🔀 SWITCH DE IDIOMA (ES ↔ EN)
-  {%- endcomment -%}
-
   {% assign alt = site.data.talks | where: "id", page.alt_lang_id | first %}
   {% if alt %}
   <div class="article-lang-switch">
