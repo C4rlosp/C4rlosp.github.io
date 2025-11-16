@@ -4,7 +4,7 @@
 - id: lacnic43
   lang: es
   title: "Participación en sesiones técnicas de enrutamiento en LACNIC 43"
-  location: "Fortaleza, Brasil"
+  location: "Sao Paulo, Brasil"
   date: "2025-05"
   image: "/images/talks/lacnic43.png"
   description: "Representación de NIC Costa Rica y CRIX en discusiones técnicas sobre BGP, RPKI, despliegue de IXPs y fortalecimiento de la infraestructura regional."
@@ -17,7 +17,7 @@
 - id: lacnic43-en
   lang: en
   title: "Participation in technical routing sessions at LACNIC 43"
-  location: "Fortaleza, Brazil"
+  location: "Sao Paulo, Brazil"
   date: "2025-05"
   image: "/images/talks/lacnic43.png"
   description: "Representing NIC Costa Rica and CRIX in technical discussions on BGP, RPKI, IXP deployment and strengthening regional Internet infrastructure."
@@ -56,7 +56,7 @@
 - id: texastech-security
   lang: es
   title: "Charla sobre seguridad global en redes en Texas Tech University"
-  location: "Avenida Escazú, Costa Rica"
+  location: "San José, Costa Rica"
   date: "2025-04-30"
   image: "/images/talks/texastech.jpg"
   description: "Presentación sobre amenazas globales en infraestructura de Internet, seguridad en BGP, validación RPKI y resiliencia operativa para redes críticas."
@@ -69,7 +69,7 @@
 - id: texastech-security-en
   lang: en
   title: "Global network security talk at Texas Tech University"
-  location: "Avenida Escazú, Costa Rica"
+  location: "San José, Costa Rica"
   date: "2025-04-30"
   image: "/images/talks/texastech.jpg"
   description: "Presentation on global threats to Internet infrastructure, BGP security, RPKI validation and operational resilience for critical networks."
