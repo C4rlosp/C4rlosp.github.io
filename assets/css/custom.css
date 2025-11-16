@@ -334,4 +334,27 @@ h1, h2, h3 {
     fill: #b8dcff;
   }
 }
+/* Normalizar espaciado H1 + subtítulo (blockquote) en hero */
+.page-content h1 {
+  margin-top: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+/* El subtítulo es un blockquote con clase */
+.page-subtitle {
+  display: block;
+  margin: 0.4rem 0 1.25rem;   /* distancia uniforme arriba/abajo */
+  padding: 0.55rem 0 0.55rem 0.95rem;
+  border-left: 3px solid #3a3a3a;
+  color: #cfcfcf;
+  font-style: italic;
+}
+
+/* Modo oscuro: tonos suaves y consistentes */
+@media (prefers-color-scheme: dark) {
+  .page-subtitle {
+    border-left-color: #2f2f2f;
+    color: #c8c8c8;
+  }
+}
 
