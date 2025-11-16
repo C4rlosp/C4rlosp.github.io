@@ -13,9 +13,22 @@
   Esto carga la hoja de estilos del tema (por ejemplo, minima).
   {%- endcomment -%}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+
+  <style>
+  /* Idioma activo se resalta y no es clickeable */
+  .lang-es .lang-es-link,
+  .lang-en .lang-en-link {
+    font-weight: bold;
+    color: #111 !important;
+    pointer-events: none;
+    text-decoration: none;
+    cursor: default;
+  }
+</style>
+  
 </head>
 
-<body>
+<body class="lang-{{ page.lang | default: 'es' }}">
 
   {% include header.html %}
 
