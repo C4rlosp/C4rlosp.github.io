@@ -9,12 +9,34 @@ description: "Field notes on network engineering, automation, monitoring, and pe
 
 # 👋 Welcome to Network Engineering Notes
 
-> _The technical blog of Carlos Pérez on network engineering, automation, monitoring, and peering._
+> The technical blog of Carlos Pérez on network engineering, automation, monitoring, and peering.
 
-## 📌 Published Articles
+## 📌 Published articles
 
-- 🇪🇸 [RPKI Ghost: el riesgo invisible en la validación de rutas](/rpki-ghost)
-- 🇬🇧 [RPKI Ghost: the invisible risk in route validation](/rpki-ghost-en)
+{% assign articles = site.data.articles | where: "lang", "en" %}
+
+<div class="articles-grid">
+  {% for a in articles %}
+    <article class="article-card">
+      <a class="article-card-link" href="{{ a.url | relative_url }}">
+        <div class="article-meta">
+          <span class="article-category">{{ a.category }}</span>
+          <span class="article-date">{{ a.date }}</span>
+        </div>
+        <h2 class="article-title">
+          {{ a.emoji }} {{ a.title }}
+        </h2>
+        <p class="article-excerpt">
+          {{ a.excerpt }}
+        </p>
+        <div class="article-footer">
+          <span class="article-readtime">⏱ {{ a.read_time }}</span>
+          <span class="article-cta">Read article →</span>
+        </div>
+      </a>
+    </article>
+  {% endfor %}
+</div>
 
 ---
 
