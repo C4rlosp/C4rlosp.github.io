@@ -2,6 +2,7 @@
 layout: default
 title: "Home"
 lang: en
+alt_lang_url: /
 ---
 
 # 👋 Welcome to Carlos Pérez’s Technical Blog
