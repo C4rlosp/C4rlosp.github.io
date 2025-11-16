@@ -3,6 +3,7 @@ layout: default
 title: "Proyectos Técnicos"
 lang: es
 permalink: /projects/
+alt_lang_url: /en/projects/
 ---
 
 # 🧠 Proyectos Técnicos
