@@ -1,0 +1,24 @@
+<header class="site-header" role="banner">
+  <div class="wrapper" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+    <div class="site-branding">
+      <a class="site-title" href="{{ "/" | relative_url }}" style="font-weight:600;text-decoration:none;">
+        Carlos Pérez – Blog Técnico
+      </a>
+    </div>
+
+    <nav class="site-nav" style="display:flex;align-items:center;gap:1.5rem;font-size:0.95rem;">
+      <a href="{{ "/" | relative_url }}">Inicio</a>
+
+      {% if page.alt_lang_url %}
+        <span style="border-left:1px solid #ddd;height:1.4rem;"></span>
+        <span style="font-size:0.9rem;">
+          {% if page.lang == "es" %}
+            🌐 Idioma: <strong>ES</strong> · <a href="{{ page.alt_lang_url | relative_url }}">EN</a>
+          {% elsif page.lang == "en" %}
+            🌐 Language: <a href="{{ page.alt_lang_url | relative_url }}">ES</a> · <strong>EN</strong>
+          {% endif %}
+        </span>
+      {% endif %}
+    </nav>
+  </div>
+</header>
