@@ -10,15 +10,20 @@
       <a href="{{ "/" | relative_url }}">Inicio</a>
 
       {% if page.alt_lang_url %}
-        <span style="border-left:1px solid #ddd;height:1.4rem;"></span>
-        <span style="font-size:0.9rem;">
-          {% if page.lang == "es" %}
-            🌐 Idioma: <strong>ES</strong> · <a href="{{ page.alt_lang_url | relative_url }}">EN</a>
-          {% elsif page.lang == "en" %}
-            🌐 Language: <a href="{{ page.alt_lang_url | relative_url }}">ES</a> · <strong>EN</strong>
-          {% endif %}
-        </span>
-      {% endif %}
+  <span style="border-left:1px solid #ddd;height:1.4rem;margin:0 .75rem;"></span>
+
+  <span style="font-size:0.93rem;">
+    {% if page.lang == "es" %}
+      🌐 Language:
+      <strong style="color:#111;">ES</strong> · 
+      <a href="{{ page.alt_lang_url | relative_url }}">EN</a>
+    {% elsif page.lang == "en" %}
+      🌐 Language:
+      <a href="{{ page.alt_lang_url | relative_url }}">ES</a> · 
+      <strong style="color:#111;">EN</strong>
+    {% endif %}
+  </span>
+{% endif %}
     </nav>
   </div>
 </header>
