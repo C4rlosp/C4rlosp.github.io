@@ -1,6 +1,6 @@
 <header class="site-header" role="banner">
   <div class="wrapper" style="display: flex; align-items: center; justify-content: space-between;">
-    <!-- Título del sitio: siempre lleva a la portada -->
+    <!-- Título del sitio -->
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
       Carlos Pérez – Blog Técnico
     </a>
@@ -9,17 +9,22 @@
       <!-- Link de inicio -->
       <a href="{{ "/" | relative_url }}">Inicio</a>
 
-      <!-- Selector de idioma: solo se muestra si la página tiene alt_lang_url -->
-      {% if page.alt_lang_url %}
-        <span style="border-left: 1px solid #ddd; height: 1.4rem; margin: 0 .75rem;"></span>
+      <!-- Selector simple de idioma -->
+      <span style="border-left: 1px solid #ddd; height: 1.4rem; margin: 0 .75rem;"></span>
 
-        <span style="font-size: 0.93rem; white-space: nowrap;">
-          🌐 Language:
-          <a class="lang-es-link" href="{{ "/rpki-ghost" | relative_url }}">ES</a> ·
-          <a class="lang-en-link" href="{{ "/rpki-ghost-en" | relative_url }}">EN</a>
-        </span>
-      {% endif %}
+      <span style="font-size: 0.93rem; white-space: nowrap;">
+        🌐 Language:
+        {% if page.lang == "es" %}
+          <strong>ES</strong> ·
+          <a href="{{ "/rpki-ghost-en" | relative_url }}">EN</a>
+        {% elsif page.lang == "en" %}
+          <a href="{{ "/rpki-ghost" | relative_url }}">ES</a> ·
+          <strong>EN</strong>
+        {% else %}
+          <a href="{{ "/rpki-ghost" | relative_url }}">ES</a> ·
+          <a href="{{ "/rpki-ghost-en" | relative_url }}">EN</a>
+        {% endif %}
+      </span>
     </nav>
   </div>
 </header>
-
