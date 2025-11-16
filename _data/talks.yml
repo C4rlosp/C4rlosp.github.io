@@ -1,0 +1,39 @@
+- id: lacnic44
+  lang: es
+  event: "LACNIC 44 – El Salvador"
+  title: "Participación en foros técnicos y sesiones de enrutamiento"
+  date: "2025-09"
+  location: "San Salvador, El Salvador"
+  link: "https://www.lacnic.net"
+  image: "/images/talks/lacnic44.jpg"
+  description: "Participación en sesiones técnicas sobre BGP, validación RPKI, seguridad y operación de IXPs."
+
+- id: lacnic44-en
+  lang: en
+  event: "LACNIC 44 – El Salvador"
+  title: "Participation in technical forums and routing sessions"
+  date: "2025-09"
+  location: "San Salvador, El Salvador"
+  link: "https://www.lacnic.net"
+  image: "/images/talks/lacnic44.jpg"
+  description: "Participation in technical sessions about BGP, RPKI validation, security, and IXP operations."
+
+- id: euroix43
+  lang: es
+  event: "Euro-IX 43 – Madrid"
+  title: "Lightning Talk: Building Trust and Local Value – The CRIX Experience"
+  date: "2025-12"
+  location: "Madrid, España"
+  link: "https://www.euro-ix.net"
+  image: "/images/talks/euroix43.jpg"
+  description: "Presentación oficial de CRIX en un evento global de IXPs, destacando impacto regional."
+
+- id: euroix43-en
+  lang: en
+  event: "Euro-IX 43 – Madrid"
+  title: "Lightning Talk: Building Trust and Local Value – The CRIX Experience"
+  date: "2025-12"
+  location: "Madrid, Spain"
+  link: "https://www.euro-ix.net"
+  image: "/images/talks/euroix43.jpg"
+  description: "Official CRIX presentation at a global IXP event highlighting regional impact."
