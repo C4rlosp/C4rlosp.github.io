@@ -1,24 +1,32 @@
 <footer class="site-footer" role="contentinfo" style="margin-top:3rem;padding:1.5rem 0;border-top:1px solid #eee;font-size:0.9rem;">
   <div class="wrapper" style="display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:flex-start;">
-    
     <div>
-      <strong>Carlos Pérez – Blog Técnico</strong><br>
-      Artículos sobre BGP, RPKI, seguridad de enrutamiento, IXPs y operación de redes.
+      <strong>
+        {% if page.lang == 'en' %}Carlos Pérez – Tech Blog{% else %}Carlos Pérez – Blog Técnico{% endif %}
+      </strong><br>
+      {% if page.lang == 'en' %}
+        Articles on BGP, RPKI, routing security, IXPs, and network operations.
+      {% else %}
+        Artículos sobre BGP, RPKI, seguridad de enrutamiento, IXPs y operación de redes.
+      {% endif %}
     </div>
 
     <div>
-      <strong>Contacto</strong><br>
-      LinkedIn: 
+      <strong>{% if page.lang == 'en' %}Contact{% else %}Contacto{% endif %}</strong><br>
+      LinkedIn:
       <a href="https://www.linkedin.com/in/carlos-ernesto-pérez-pérez-442900123" target="_blank" rel="noopener">
         carlos-ernesto-pérez-pérez-442900123
       </a><br>
-      GitHub: 
-      <a href="https://github.com/C4rlosp" target="_blank" rel="noopener">C4rlosp</a>
+      GitHub: <a href="https://github.com/C4rlosp" target="_blank" rel="noopener">C4rlosp</a>
     </div>
 
     <div style="opacity:0.8;">
       © {{ site.time | date: "%Y" }} Carlos Pérez.<br>
-      Publicado con <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> y Jekyll.
+      {% if page.lang == 'en' %}
+        Published with <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> and Jekyll.
+      {% else %}
+        Publicado con <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> y Jekyll.
+      {% endif %}
     </div>
   </div>
 </footer>
