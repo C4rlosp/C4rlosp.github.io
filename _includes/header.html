@@ -1,15 +1,13 @@
 <header class="site-header" role="banner">
   <div class="wrapper header-flex">
     <!-- Marca / título -->
-    <a class="site-title" rel="author"
-       href="{% if page.lang == 'en' %}{{ '/index-en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
-      {% if page.lang == 'en' %}
-        Carlos Pérez | Network Engineering Notes
-      {% else %}
-        Carlos Pérez | Network Engineering Notes
-      {% endif %}
-    </a>
-
+   <a class="site-title" rel="author"
+   href="{% if page.lang == 'en' %}{{ '/index-en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}"
+   aria-label="Carlos Pérez | Network Engineering Notes">
+  <span class="title-full">Carlos Pérez&nbsp;|&nbsp;Network Engineering Notes</span>
+  <span class="title-short">Carlos Pérez&nbsp;|&nbsp;NetEng Notes</span>
+</a>
+    
     <!-- Navegación -->
     <nav class="site-nav">
       <a href="{% if page.lang == 'en' %}{{ '/index-en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
