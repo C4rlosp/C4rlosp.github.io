@@ -14,4 +14,4 @@ reference:
   url: "https://nic.cr/2025/10/31/nic-costa-rica-comparte-la-experiencia-del-crix-en-lacnic-44-y-lac-ix-technical-meeting/"
 ---
 
-(Version en inglés del resumen.)
+(English version of the summary.)
