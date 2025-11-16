@@ -19,6 +19,13 @@
   <meta property="og:description" content="Field notes on network engineering, automation, monitoring, and peering.">
   {% endif %}
 
+  {% if page.lang == "es" %}
+  <meta name="description" content="Blog técnico sobre BGP, RPKI, IXPs, automatización, monitoreo y seguridad en infraestructura de Internet.">
+  {% else %}
+  <meta name="description" content="Technical blog about BGP, RPKI, IXPs, automation, monitoring, and Internet infrastructure security.">
+  {% endif %}
+
+
   <meta property="og:type" content="website">
   <meta property="og:title" content="Carlos Pérez | Network Engineering Notes">
   <meta property="og:locale" content="{{ page.lang | default: 'es' }}">
