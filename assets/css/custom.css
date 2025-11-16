@@ -937,3 +937,46 @@ header.site-header .divider {
     color: #8cc4ff;
   }
 }
+.talk-card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.talk-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.talk-thumb {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.talk-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.talk-body {
+  padding: 1.25rem 1.5rem 1.4rem;
+}
+
+.talk-footer {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #2563eb; /* parecido al azul del enlace "Leer artículo" */
+}
+
+.talk-cta {
+  white-space: nowrap;
+}
