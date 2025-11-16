@@ -119,3 +119,55 @@ h1, h2, h3 {
   width: .25rem;   /* espacio fino */
 }
 
+/* Header flexbox */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+}
+
+/* Enlaces del header */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+.site-nav a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Separador vertical */
+.divider {
+  border-left: 1px solid #ddd;
+  height: 1.2rem;
+  margin: 0 0.5rem;
+}
+
+/* Selector de idioma */
+.language-switch {
+  white-space: nowrap;
+  font-size: 0.93rem;
+}
+
+/* En móvil */
+@media (max-width: 600px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
