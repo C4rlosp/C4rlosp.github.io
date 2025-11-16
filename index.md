@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Carlos Pérez – Blog Técnico"
-lang: en
+lang: es
 alt_lang_url: /index-en
 ---
 
