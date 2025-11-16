@@ -3,18 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} | Carlos Pérez – Blog Técnico</title>
 
-  <!-- Tema por defecto -->
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <title>
+    {% if page.title %}{{ page.title }} | {% endif %}
+    Carlos Pérez – Blog Técnico
+  </title>
+
+  {%- comment -%}
+  Esto carga la hoja de estilos del tema (por ejemplo, minima).
+  {%- endcomment -%}
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 </head>
 
 <body>
 
   {% include header.html %}
 
-  <main class="page-content" aria-label="Content" style="padding: 2rem 1.5rem; max-width: 900px; margin:auto;">
-    {{ content }}
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
   </main>
 
   {% include footer.html %}
