@@ -1,5 +1,5 @@
 ---
-layout: talk
+layout: default
 lang: es
 id: lacnic44
 alt_lang_id: lacnic44-en
