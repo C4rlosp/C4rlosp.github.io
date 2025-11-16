@@ -19,7 +19,7 @@ A continuación encontrarás algunos de los proyectos desarrollados para el IXP 
 
 ### 🇪🇸 [zabbix-bgp-ipv4-ipv6-monitoring](https://github.com/C4rlosp/zabbix-bgp-ipv4-ipv6-monitoring)
 > Template de **Zabbix** para monitorear sesiones **BGP IPv4/IPv6** en routers Cisco mediante **SNMPv2**.  
-> Incluye versión bilingüe (Español/Inglés) y soporte para entornos de IXPs.
+> Soporte para entornos de IXPs.
 
 ---
 
