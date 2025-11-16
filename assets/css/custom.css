@@ -78,3 +78,44 @@ h1, h2, h3 {
     padding-right: 1rem;
   }
 }
+
+/* Footer layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Iconos sociales */
+.site-footer .social {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  margin-right: .75rem;
+}
+
+.site-footer .icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Separador puntual entre enlaces sociales */
+.site-footer .sep {
+  opacity: .4;
+  margin: 0 .4rem;
+}
+
+/* Asegurar espacio “y Jekyll” / “and Jekyll” */
+.site-footer .legal .nbsp {
+  display: inline-block;
+  width: .25rem;   /* espacio fino */
+}
+
