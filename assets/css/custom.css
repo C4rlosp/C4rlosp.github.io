@@ -912,3 +912,28 @@ header.site-header .divider {
     color: #8cc4ff;
   }
 }
+/* ===============================
+   🌐 Language Switch (Talks pages)
+   =============================== */
+
+.page-lang-switch {
+  text-align: right;
+  margin: 0.2rem 0 1.2rem;
+}
+
+.page-lang-switch .lang-switch-btn {
+  font-size: 0.9rem;
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.page-lang-switch .lang-switch-btn:hover {
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .page-lang-switch .lang-switch-btn {
+    color: #8cc4ff;
+  }
+}
