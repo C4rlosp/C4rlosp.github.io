@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: 'es' }}">
+  <!DOCTYPE html>
+<html lang="{{ page.lang | default: 'es' }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>
-    {% if page.title %}{{ page.title }} | {% endif %}
-    Carlos Pérez | Network Engineering Notes
-  </title>
-  <!-- i18n SEO -->
-  <link rel="alternate" hreflang="es" href="{{ '/' | absolute_url }}" />
-  <link rel="alternate" hreflang="en" href="{{ '/index-en/' | absolute_url }}" />
-  <meta name="description" content="{% if page.lang == 'en' %}Technical blog about BGP, RPKI, routing security, IXPs, and automation.{% else %}Blog técnico sobre BGP, RPKI, seguridad de enrutamiento, IXPs y automatización.{% endif %}">
+  {%- comment -%}
+  SEO automático (title, description, canonical, Open Graph, Twitter Cards, JSON-LD)
+  Requiere jekyll-seo-tag en _config.yml
+  {%- endcomment -%}
+  {% seo %}
 
+  <!-- i18n alternates -->
+  <link rel="alternate" hreflang="es" href="{{ '/' | absolute_url }}">
+  <link rel="alternate" hreflang="en" href="{{ '/index-en/' | absolute_url }}">
 
- <!-- Estilos --->
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/custom.css?v=6' | relative_url }}">
 
-  <!-- favicon --->
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
-  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon-32.png' | relative_url }}" sizes="32x32">
-
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
 </head>
 
 <body class="lang-{{ page.lang | default: 'es' }}">
