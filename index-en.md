@@ -19,20 +19,33 @@ description: "Field notes on network engineering, automation, monitoring, and pe
   {% for a in articles %}
     <article class="article-card">
       <a class="article-card-link" href="{{ a.url | relative_url }}">
-        <div class="article-meta">
-          <span class="article-category">{{ a.category }}</span>
-          <span class="article-date">{{ a.date }}</span>
+        
+        {% if a.image %}
+        <div class="article-thumb">
+          <img src="{{ a.image | relative_url }}" alt="{{ a.title }}">
         </div>
-        <h2 class="article-title">
-          {{ a.emoji }} {{ a.title }}
-        </h2>
-        <p class="article-excerpt">
-          {{ a.excerpt }}
-        </p>
-        <div class="article-footer">
-          <span class="article-readtime">⏱ {{ a.read_time }}</span>
-          <span class="article-cta">Read article →</span>
+        {% endif %}
+
+        <div class="article-body">
+          <div class="article-meta">
+            <span class="article-category">{{ a.category }}</span>
+            <span class="article-date">{{ a.date }}</span>
+          </div>
+
+          <h2 class="article-title">
+            {{ a.emoji }} {{ a.title }}
+          </h2>
+
+          <p class="article-excerpt">
+            {{ a.excerpt }}
+          </p>
+
+          <div class="article-footer">
+            <span class="article-readtime">⏱ {{ a.read_time }}</span>
+            <span class="article-cta">Read article →</span>
+          </div>
         </div>
+
       </a>
     </article>
   {% endfor %}
