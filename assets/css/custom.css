@@ -99,12 +99,15 @@ h1, h2, h3 {
   align-items: center;
   gap: .4rem;
   margin-right: .75rem;
+  vertical-align: middle;
 }
 
 .site-footer .icon {
   width: 18px;
   height: 18px;
   fill: currentColor;
+  position: relative;
+  top: 2px; /* 👈 ajusta alineación vertical uniforme */
 }
 
 /* Separador puntual entre enlaces sociales */
