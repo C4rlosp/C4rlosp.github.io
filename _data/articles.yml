@@ -7,7 +7,7 @@
   title: "RPKI Ghost: el riesgo invisible en la validación de rutas"
   excerpt: "Un problema poco visible en la validación de rutas con RPKI que puede hacer que el tráfico legítimo desaparezca sin levantar alarmas."
   read_time: "10 min"
-  image: "/images/rpki-ghost-cover.png"   # 👈 opcional
+  image: "/images/rpki-ghost-rootca.png"   # 👈 opcional
 
 - id: rpki-ghost-en
   lang: en
@@ -18,4 +18,4 @@
   title: "RPKI Ghost: the invisible risk in route validation"
   excerpt: "A subtle issue in RPKI-based route validation that can silently blackhole legitimate traffic without obvious warnings."
   read_time: "10 min"
-  image: "/images/rpki-ghost-cover.png"   # 👈 opcional
+  image: "/images/rpki-ghost-rootca.png"   # 👈 opcional
