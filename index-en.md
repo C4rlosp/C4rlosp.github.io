@@ -14,4 +14,6 @@ I write about **BGP, RPKI, routing security, IXPs, automation**, and real-world 
 - 🇪🇸 [RPKI Ghost: el riesgo invisible en la validación de rutas](/rpki-ghost)
 - 🇬🇧 [RPKI Ghost: the invisible risk in route validation](/rpki-ghost-en)
 
+---
+
 Thanks for visiting this site.
