@@ -2,7 +2,7 @@
   <div class="wrapper" style="display:flex;align-items:center;justify-content:space-between;">
     <!-- Marca / link a home según idioma -->
     <a class="site-title" rel="author"
-       href="{% if page.lang == 'en' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
+       href="{% if page.lang == 'en' %}{{ '/index-en' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
       {% if page.lang == 'en' %}
         Carlos Pérez – Tech Blog
       {% else %}
@@ -12,7 +12,7 @@
 
     <nav class="site-nav" style="display:flex;align-items:center;gap:1.5rem;">
       <!-- Link de inicio/home según idioma -->
-      <a href="{% if page.lang == 'en' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
+      <a href="{% if page.lang == 'en' %}{{ '/index-en' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
         {% if page.lang == 'en' %}Home{% else %}Inicio{% endif %}
       </a>
 
@@ -24,14 +24,14 @@
         {% if page.lang == 'en' %}🌐 Language:{% else %}🌐 Idioma:{% endif %}
         {% if page.lang == 'es' %}
           <strong>ES</strong> ·
-          <a href="{{ page.alt_lang_url | default: '/en/' | relative_url }}">EN</a>
+          <a href="{{ page.alt_lang_url | default: '/index-en' | relative_url }}">EN</a>
         {% elsif page.lang == 'en' %}
           <a href="{{ page.alt_lang_url | default: '/' | relative_url }}">ES</a> ·
           <strong>EN</strong>
         {% else %}
           <!-- Fallback si no se definió lang -->
           <a href="{{ '/' | relative_url }}">ES</a> ·
-          <a href="{{ '/en/' | relative_url }}">EN</a>
+          <a href="{{ '/index-en' | relative_url }}">EN</a>
         {% endif %}
       </span>
     </nav>
