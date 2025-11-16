@@ -1,22 +1,39 @@
 - id: lacnic44
   lang: es
+  alt_lang_id: lacnic44-en
   event: "LACNIC 44 – El Salvador"
-  title: "Participación en foros técnicos y sesiones de enrutamiento"
+  title: "Participación en sesiones técnicas de enrutamiento y operación de IXPs"
   date: "2025-09"
   location: "San Salvador, El Salvador"
   link: "https://www.lacnic.net"
+
   image: "/images/talks/lacnic44.jpg"
-  description: "Participación en sesiones técnicas sobre BGP, validación RPKI, seguridad y operación de IXPs."
+
+  description: "Participación representando a NIC Costa Rica y CRIX en sesiones técnicas de BGP, RPKI y operación de IXPs."
+  
+  reference:
+    label: "Artículo oficial de NIC Costa Rica"
+    url: "https://nic.cr/2025/10/31/nic-costa-rica-comparte-la-experiencia-del-crix-en-lacnic-44-y-lac-ix-technical-meeting/"
 
 - id: lacnic44-en
   lang: en
+  alt_lang_id: lacnic44
   event: "LACNIC 44 – El Salvador"
   title: "Participation in technical forums and routing sessions"
   date: "2025-09"
   location: "San Salvador, El Salvador"
   link: "https://www.lacnic.net"
+  
   image: "/images/talks/lacnic44.jpg"
-  description: "Participation in technical sessions about BGP, RPKI validation, security, and IXP operations."
+
+  description: >
+    Participation representing NIC Costa Rica and CRIX in technical sessions 
+    about BGP, RPKI validation, routing security, DNS, and IXP operations.
+
+  reference:
+    label: "Official NIC Costa Rica article"
+    url: "https://nic.cr/2025/10/31/nic-costa-rica-comparte-la-experiencia-del-crix-en-lacnic-44-y-lac-ix-technical-meeting/"
+
 
 - id: euroix43
   lang: es
