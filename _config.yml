@@ -1,21 +1,69 @@
+# ==========================================
+# 🌐 Site Configuration – Carlos Pérez Blog
+# ==========================================
+
 title: "Carlos Pérez | Network Engineering Notes"
 description: "Notas sobre ingeniería de redes, automatización, monitoreo y peering."
+author: "Carlos Pérez"
 theme: minima
 
+# URL del sitio (ajústala si usas dominio personalizado)
+url: "https://c4rlosp.github.io"
+baseurl: ""  # dejar vacío para GitHub Pages principal
+
+# ==============================
+# 🔍 Markdown y formato de posts
+# ==============================
 markdown: kramdown
 kramdown:
   input: GFM
 
+# ===========================
+# 🔌 Plugins activos en Jekyll
+# ===========================
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag   # agrega meta tags para SEO y redes sociales
 
-# 👇 Agrega esto al final del archivo
+# ===========================
+# 🌍 Idiomas por defecto
+# ===========================
 defaults:
   - scope:
-      path: ""          # raíz del sitio, idioma por defecto (español)
+      path: ""          # raíz del sitio → español
     values:
       lang: es
   - scope:
-      path: "en"        # todo lo que esté dentro de /en/ hereda lang: en
+      path: "en"        # carpeta /en/ → inglés
     values:
       lang: en
+
+# ==============================
+# 📡 Feed (RSS/Atom)
+# ==============================
+feed:
+  path: feed.xml
+  posts_limit: 10
+  excerpt_only: true
+
+# ==============================
+# 🌐 Redes y SEO
+# ==============================
+social:
+  name: "Carlos Pérez"
+  links:
+    - "https://github.com/C4rlosp"
+    - "https://www.linkedin.com/in/carlos-ernesto-pérez-pérez-442900123"
+
+# ==============================
+# ⚙️ Extras
+# ==============================
+timezone: "America/Costa_Rica"
+
+# Excluir archivos no necesarios en el build
+exclude:
+  - README.md
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - vendor
