@@ -16,12 +16,14 @@ alt_lang_url: /en/talks/
 
 Aquí encontrarás mis participaciones en eventos, conferencias, foros técnicos y presentaciones internacionales sobre IXPs, BGP, RPKI y operación de redes.
 
-{% assign talks = site.data.talks | where_exp: "t", "t.lang == 'es' and (t.published == nil or t.published == true or t.published == 'true')" %}
+{% assign talks = site.data.talks 
+   | where_exp: "t", "t.lang == 'es' and (t.published == nil or t.published == true)" %}
 
 <div class="talks-grid">
   {% for t in talks %}
   <article class="talk-card">
     <a class="talk-card-link" href="{{ t.url | relative_url }}">
+
       {% if t.image %}
       <div class="talk-thumb">
         <img src="{{ t.image | relative_url }}" alt="{{ t.title }}">
@@ -51,4 +53,3 @@ Aquí encontrarás mis participaciones en eventos, conferencias, foros técnicos
   </article>
   {% endfor %}
 </div>
-
