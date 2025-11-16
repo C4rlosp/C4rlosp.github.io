@@ -6,9 +6,16 @@ permalink: /talks/
 alt_lang_url: /en/talks/
 ---
 
-# 🎤 Charlas y Presentaciones
-
-Aquí encontrarás mis participaciones en eventos, conferencias, foros técnicos y presentaciones internacionales sobre IXPs, BGP, RPKI y operación de redes.
+<section class="talks-hero">
+  <h1 class="talks-hero-title">
+    <span class="emoji">🎤</span>
+    Charlas y Presentaciones
+  </h1>
+  <p class="talks-hero-lead">
+    Aquí encontrarás mis participaciones en eventos, conferencias, foros técnicos y presentaciones
+    internacionales sobre IXPs, BGP, RPKI y operación de redes.
+  </p>
+</section>
 
 {% assign talks = site.data.talks | where: "lang", "es" %}
 
