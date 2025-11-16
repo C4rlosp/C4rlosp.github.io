@@ -554,3 +554,13 @@ window.addEventListener('scroll', () => {
   if (window.scrollY > 10) header.classList.add('scrolled');
   else header.classList.remove('scrolled');
 });
+/* Realce sutil para el ícono de proyectos */
+.site-nav a[href*="projects"]:hover {
+  text-decoration: none;
+  color: #4da3ff;
+}
+.site-nav a[href*="projects"] {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+}
