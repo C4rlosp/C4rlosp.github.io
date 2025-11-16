@@ -21,10 +21,17 @@ description: "Field notes on network engineering, automation, monitoring, and pe
       <a class="article-card-link" href="{{ a.url | relative_url }}">
         
         {% if a.image %}
-        <div class="article-thumb">
-          <img src="{{ a.image | relative_url }}" alt="{{ a.title }}">
-        </div>
-        {% endif %}
+  <div class="article-thumb">
+    <img src="{{ a.image | relative_url }}" alt="{{ a.title }}">
+  </div>
+{% else %}
+  <div class="article-thumb placeholder">
+    <div class="placeholder-content">
+      <span class="emoji">{{ a.emoji }}</span>
+    </div>
+  </div>
+{% endif %}
+
 
         <div class="article-body">
           <div class="article-meta">
