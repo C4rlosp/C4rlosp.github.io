@@ -3,7 +3,9 @@ layout: default
 title: "RPKI Ghost: el riesgo invisible en la validación de rutas"
 nav_exclude: true
 lang: es
+permalink: /rpki-ghost/
 alt_lang_url: /rpki-ghost-en
+description: "Un problema poco visible en la validación de rutas con RPKI que puede hacer que el tráfico legítimo desaparezca sin levantar alarmas."
 ---
 
 # RPKI Ghost: el riesgo invisible en la validación de rutas
