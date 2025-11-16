@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<div class="talk-wrapper">
+
+  {%- comment -%}
+    🔀 SWITCH DE IDIOMA (ES ↔ EN)
+  {%- endcomment -%}
+
+  {% assign alt = site.data.talks | where: "id", page.alt_lang_id | first %}
+  {% if alt %}
+  <div class="article-lang-switch">
+    {% if page.lang == "es" %}
+      <a href="{{ alt.url | relative_url }}" class="lang-switch-btn">View in English →</a>
+    {% else %}
+      <a href="{{ alt.url | relative_url }}" class="lang-switch-btn">Ver en Español →</a>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <h1 class="talk-title">{{ page.title }}</h1>
+
+  <p class="talk-meta">
+    <strong>{{ page.event }}</strong> · {{ page.date }} · {{ page.location }}
+  </p>
+
+  {% if page.image %}
+  <div class="talk-image">
+    <img src="{{ page.image }}" alt="{{ page.title }}">
+  </div>
+  {% endif %}
+
+  <div class="talk-content">
+    {{ content }}
+  </div>
+
+  {% if page.reference %}
+  <p class="talk-reference">
+    🔗 <a href="{{ page.reference.url }}" target="_blank">{{ page.reference.label }}</a>
+  </p>
+  {% endif %}
+
+</div>
