@@ -204,3 +204,45 @@ h1, h2, h3 {
   }
   .divider { border-color: #444; }
 }
+/* ===== Modo oscuro mejorado ===== */
+@media (prefers-color-scheme: dark) {
+  /* Enlaces más suaves */
+  a {
+    color: #4da3ff; /* azul más tenue */
+  }
+  a:hover {
+    color: #8cc4ff;
+  }
+
+  /* Colores generales */
+  body {
+    background-color: #111;
+    color: #e5e5e5;
+  }
+
+  header.site-header, .site-footer {
+    background-color: #181818;
+    border-color: #333;
+  }
+
+  .divider { border-color: #444; }
+
+  /* Texto y títulos */
+  h1, h2, h3, strong {
+    color: #ffffff;
+  }
+
+  /* Íconos sociales */
+  .site-footer .social svg {
+    fill: #4da3ff;
+  }
+  .site-footer .social:hover svg {
+    fill: #8cc4ff;
+  }
+
+  /* Sutil sombra en títulos principales */
+  h1 {
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  }
+}
+
