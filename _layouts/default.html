@@ -46,6 +46,17 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16.png' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
   <link rel="manifest" href="{{ '/assets/images/site.webmanifest' | relative_url }}">
+
+    <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4SVJLLT35D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4SVJLLT35D');
+  </script>
+  <!-- End Google Analytics -->
+  
 </head>
 
 <body class="lang-{{ page.lang | default: 'es' }}">
@@ -69,6 +80,3 @@
 </script>
 </body>
 </html>
-
-
-
