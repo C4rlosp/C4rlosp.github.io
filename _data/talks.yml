@@ -7,7 +7,7 @@
   location: "San Salvador, El Salvador"
   url: "/talks/lacnic44/"
   external_url: "https://nic.cr/2025/10/31/nic-costa-rica-comparte-la-experiencia-del-crix-en-lacnic-44-y-lac-ix-technical-meeting/"
-  image: "/images/talks/lacnic44.jpg"
+  image: "/images/talks/lacnic.jpg"
   description: "Participación representando a NIC Costa Rica y CRIX en sesiones técnicas de BGP, RPKI y operación de IXPs."
   published: true
 
@@ -20,7 +20,7 @@
   location: "San Salvador, El Salvador"
   url: "/en/talks/lacnic44/"
   external_url: "https://nic.cr/2025/10/31/nic-costa-rica-comparte-la-experiencia-del-crix-en-lacnic-44-y-lac-ix-technical-meeting/"
-  image: "/images/talks/lacnic44.jpg"
+  image: "/images/talks/lacnic.jpg"
   description: "Participation representing NIC Costa Rica and CRIX in technical sessions about BGP, RPKI validation and IXP operations."
   published: true
 
