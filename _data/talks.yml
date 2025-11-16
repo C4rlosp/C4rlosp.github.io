@@ -30,7 +30,7 @@
   title: "Lightning Talk: Building Trust and Local Value – The CRIX Experience"
   date: "2025-12"
   location: "Madrid, España"
-  link: "https://www.euro-ix.net"
+  link: "" # URL vacío → el filtro ya no lo muestra
   image: "/images/talks/euroix43.jpg"
   description: "Presentación oficial de CRIX en un evento global de IXPs, destacando impacto regional."
   published: false
@@ -41,7 +41,7 @@
   title: "Lightning Talk: Building Trust and Local Value – The CRIX Experience"
   date: "2025-12"
   location: "Madrid, Spain"
-  link: "https://www.euro-ix.net"
+  link: "" # URL vacío → el filtro ya no lo muestra
   image: "/images/talks/euroix43.jpg"
   description: "Official CRIX presentation at a global IXP event highlighting regional impact."
   published: false
