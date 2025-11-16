@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="{{ page.lang | default: 'es' }}">
 <head>
   <meta charset="utf-8">
@@ -19,9 +19,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/custom.css?v=6' | relative_url }}">
 
-  <!-- Favicon -->
+  <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+  <link rel="manifest" href="{{ '/assets/icons/site.webmanifest' | relative_url }}">
 </head>
 
 <body class="lang-{{ page.lang | default: 'es' }}">
