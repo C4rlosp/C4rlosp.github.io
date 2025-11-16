@@ -7,9 +7,9 @@ permalink: /index-en/
 description: "Field notes on network engineering, automation, monitoring, and peering."
 ---
 
-# 👋 Welcome to **Network Engineering Notes**
+# 👋 Welcome to Network Engineering Notes
 
-> _Field notes on network engineering, automation, monitoring, and peering._
+> _The technical blog of Carlos Pérez on network engineering, automation, monitoring, and peering._
 
 ## 📌 Published Articles
 
