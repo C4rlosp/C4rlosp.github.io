@@ -10,8 +10,8 @@ Analizo temas de **BGP**, **RPKI**, **seguridad de enrutamiento**, IXPs, automat
 
 ## 📌 Artículos publicados
 
-- 🇪🇸 [RPKI Ghost: el riesgo invisible en la validación de rutas](rpki-ghost.md)  
-- 🇬🇧 [RPKI Ghost: the invisible risk in route validation](rpki-ghost-en.md)
+- 🇪🇸 [RPKI Ghost: el riesgo invisible en la validación de rutas](rpki-ghost)  
+- 🇬🇧 [RPKI Ghost: the invisible risk in route validation](rpki-ghost-en)
 
 ---
 
