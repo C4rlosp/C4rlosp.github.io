@@ -24,24 +24,24 @@
   description: "Participation representing NIC Costa Rica and CRIX in technical sessions about BGP, RPKI validation and IXP operations."
   published: true
 
-- id: euroix43
-  lang: es
-  event: "Euro-IX 43 – Madrid"
-  title: "Lightning Talk: Building Trust and Local Value – The CRIX Experience"
-  date: "2025-12"
-  location: "Madrid, España"
-  link: "" # URL vacío → el filtro ya no lo muestra
-  image: "/images/talks/euroix43.jpg"
-  description: "Presentación oficial de CRIX en un evento global de IXPs, destacando impacto regional."
-  published: false
-
-- id: euroix43-en
-  lang: en
-  event: "Euro-IX 43 – Madrid"
-  title: "Lightning Talk: Building Trust and Local Value – The CRIX Experience"
-  date: "2025-12"
-  location: "Madrid, Spain"
-  link: "" # URL vacío → el filtro ya no lo muestra
-  image: "/images/talks/euroix43.jpg"
-  description: "Official CRIX presentation at a global IXP event highlighting regional impact."
-  published: false
+# ===== FUTURE EVENT: EURO-IX 43 =====
+# - id: euroix43
+#   lang: es
+#   event: "Euro-IX 43 – Madrid"
+#   title: "Lightning Talk: Building Trust and Local Value – The CRIX Experience"
+#   date: "2025-12"
+#   location: "Madrid, España"
+#   image: "/images/talks/euroix43.jpg"
+#   description: "Presentación oficial..."
+#   published: false
+#
+# - id: euroix43-en
+#   lang: en
+#   event: "Euro-IX 43 – Madrid"
+#   title: "Lightning Talk: Building Trust and Local Value – The CRIX Experience"
+#   date: "2025-12"
+#   location: "Madrid, Spain"
+#   image: "/images/talks/euroix43.jpg"
+#   description: "Official CRIX presentation..."
+#   published: false
+# ===== END FUTURE EVENT =====
