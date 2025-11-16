@@ -3,7 +3,7 @@
 # ==========================================
 
 title: "Carlos Pérez | Network Engineering Notes"
-description: "Notas sobre ingeniería de redes, automatización, monitoreo y peering."
+description: "Blog técnico sobre BGP, RPKI, IXPs, automatización y seguridad en infraestructura de Internet."
 author: "Carlos Pérez"
 theme: minima
 
@@ -24,7 +24,6 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag   # agrega meta tags para SEO y redes sociales
-description: "Blog técnico sobre BGP, RPKI, IXPs, automatización y seguridad en infraestructura de Internet."
 
 # ===========================
 # 🌍 Idiomas por defecto
