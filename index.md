@@ -6,9 +6,9 @@ alt_lang_url: /index-en
 description: "Notas sobre ingeniería de redes, automatización, monitoreo y peering."
 ---
 
-# 👋 Bienvenido al blog técnico de Carlos Pérez
+# 👋 Bienvenido a Network Engineering Notes
 
-> _Notas sobre ingeniería de redes, automatización, monitoreo y peering._
+> _El blog técnico de Carlos Pérez sobre ingeniería de redes, automatización, monitoreo y peering._
 
 ## 📌 Artículos publicados
 
