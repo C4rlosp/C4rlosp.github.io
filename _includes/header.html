@@ -9,22 +9,33 @@
       <!-- Link de inicio -->
       <a href="{{ "/" | relative_url }}">Inicio</a>
 
-      <!-- Selector simple de idioma -->
+      <!-- Separador visual -->
       <span style="border-left: 1px solid #ddd; height: 1.4rem; margin: 0 .75rem;"></span>
 
+      <!-- Selector de idioma genérico -->
       <span style="font-size: 0.93rem; white-space: nowrap;">
         🌐 Language:
         {% if page.lang == "es" %}
           <strong>ES</strong> ·
-          <a href="{{ "/rpki-ghost-en" | relative_url }}">EN</a>
+          {% if page.alt_lang_url %}
+            <a href="{{ page.alt_lang_url | relative_url }}">EN</a>
+          {% else %}
+            <a href="{{ "/index-en" | relative_url }}">EN</a>
+          {% endif %}
         {% elsif page.lang == "en" %}
-          <a href="{{ "/rpki-ghost" | relative_url }}">ES</a> ·
+          {% if page.alt_lang_url %}
+            <a href="{{ page.alt_lang_url | relative_url }}">ES</a> ·
+          {% else %}
+            <a href="{{ "/" | relative_url }}">ES</a> ·
+          {% endif %}
           <strong>EN</strong>
         {% else %}
-          <a href="{{ "/rpki-ghost" | relative_url }}">ES</a> ·
-          <a href="{{ "/rpki-ghost-en" | relative_url }}">EN</a>
+          <!-- Fallback si no se definió lang -->
+          <a href="{{ "/" | relative_url }}">ES</a> ·
+          <a href="{{ "/index-en" | relative_url }}">EN</a>
         {% endif %}
       </span>
     </nav>
   </div>
 </header>
+
