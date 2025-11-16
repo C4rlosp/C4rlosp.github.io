@@ -357,4 +357,57 @@ h1, h2, h3 {
     color: #c8c8c8;
   }
 }
+/* ===== Header responsive ===== */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .75rem 0;
+  flex-wrap: wrap; /* permite bajar el nav */
+}
+
+.site-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: clamp(240px, 60vw, 620px);
+  line-height: 1.2;
+}
+
+/* Dos variantes del título: por defecto, larga visible */
+.site-title .title-full { display: inline; }
+.site-title .title-short { display: none; }
+
+/* Menú */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap; /* evita solapes en móviles */
+}
+
+.divider { border-left: 1px solid #ddd; height: 1.2rem; margin: 0 .5rem; }
+
+/* Compacto en móviles medianos */
+@media (max-width: 560px) {
+  .site-title { max-width: 66vw; font-size: 1.06rem; }
+  .site-title .title-full { display: none; }
+  .site-title .title-short { display: inline; }  /* 👈 aparece el corto */
+  .divider { display: none; }                    /* quita el separador vertical */
+  .site-nav { gap: .7rem; }
+  .site-nav a { padding: 4px 0; }
+}
+
+/* Extra-compacto (teléfonos muy pequeños) */
+@media (max-width: 360px) {
+  .site-title { max-width: 64vw; font-size: 1rem; }
+  .language-switch { font-size: .95rem; }
+}
+
+/* iOS Safari: quita highlight blanco al tocar */
+a { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+@supports (-webkit-touch-callout: none) {
+  header.site-header { background-color: #181818; }
+}
 
