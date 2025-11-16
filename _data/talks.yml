@@ -76,6 +76,9 @@
 #   external_url: ""  # Pending official link
    published: true
 
+# ============================
+# LACNIC 44 — ES
+# ============================
 - id: lacnic44
   lang: es
   alt_lang_id: lacnic44-en
@@ -89,6 +92,9 @@
   description: "Participación representando a NIC Costa Rica y CRIX en sesiones técnicas de BGP, RPKI y operación de IXPs."
   published: true
 
+# ============================
+# LACNIC 43 — EN
+# ============================
 - id: lacnic44-en
   lang: en
   alt_lang_id: lacnic44
