@@ -7,7 +7,7 @@
   title: "RPKI Ghost: el riesgo invisible en la validación de rutas"
   excerpt: "Un problema poco visible en la validación de rutas con RPKI que puede hacer que el tráfico legítimo desaparezca sin levantar alarmas."
   read_time: "10 min"
-  image: "/images/articles/rpki-ghost-es-thumb.jpg"   # 👈 opcional
+  image: "/images/rpki-ghost-cover.png/"   # 👈 opcional
 
 - id: rpki-ghost-en
   lang: en
