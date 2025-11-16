@@ -1,14 +1,15 @@
 ---
 layout: default
-title: "Home"
+title: "Carlos Pérez | Network Engineering Notes"
 lang: en
 alt_lang_url: /
 permalink: /index-en/
+description: "Field notes on network engineering, automation, monitoring, and peering."
 ---
 
-# 👋 Welcome to Carlos Pérez’s Technical Blog
+# 👋 Welcome to **Network Engineering Notes**
 
-I write about **BGP, RPKI, routing security, IXPs, automation**, and real-world experiences operating Internet infrastructure.
+> _Field notes on network engineering, automation, monitoring, and peering._
 
 ## 📌 Published Articles
 
