@@ -980,3 +980,33 @@ header.site-header .divider {
 .talk-cta {
   white-space: nowrap;
 }
+/* Hero de la página de charlas */
+.talks-hero {
+  max-width: 680px;
+  margin: 1.5rem auto 2.75rem;
+}
+
+.talks-hero-title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: clamp(1.9rem, 3vw, 2.3rem);
+  letter-spacing: -0.03em;
+  margin: 0 0 0.6rem;
+}
+
+.talks-hero-title .emoji {
+  font-size: 1.6rem;
+}
+
+.talks-hero-lead {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: #4b5563; /* gris suave tipo texto secundario */
+}
+
+/* Opcional: que el wrapper general no quede tan ancho en escritorio */
+.page-content .wrapper {
+  max-width: 980px;
+}
