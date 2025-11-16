@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Carlos Pérez – Blog Técnico"
-lang: es
+lang: en
 ---
 
 # 👋 Bienvenido al blog técnico de Carlos Pérez
