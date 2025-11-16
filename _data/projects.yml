@@ -1,0 +1,38 @@
+- id: zabbix-bgp-monitoring-bird
+  repo: "https://github.com/C4rlosp/zabbix-bgp-monitoring-bird"
+  icon: "🟢"
+  order: 1
+  pill_es: "IXP · BGP · Zabbix"
+  pill_en: "IXP · BGP · Zabbix"
+  title_es: "zabbix-bgp-monitoring-bird"
+  title_en: "zabbix-bgp-monitoring-bird"
+  summary_es: "Monitoreo BGP automatizado en routers BIRD (IXP – NIC CR) usando Zabbix Agent, scripts y LLD (IPv4/IPv6)."
+  summary_en: "Automated BGP monitoring on BIRD routers (IXP – NIC CR) using Zabbix Agent, scripts and LLD (IPv4/IPv6)."
+  detail_es: "Permite visibilidad detallada del estado de sesiones BGP y detección temprana de fallos."
+  detail_en: "Provides detailed visibility into BGP session states and early fault detection."
+
+- id: zabbix-bgp-ipv4-ipv6-monitoring
+  repo: "https://github.com/C4rlosp/zabbix-bgp-ipv4-ipv6-monitoring"
+  icon: "🇪🇸"
+  order: 2
+  pill_es: "BGP · Cisco · SNMP"
+  pill_en: "BGP · Cisco · SNMP"
+  title_es: "zabbix-bgp-ipv4-ipv6-monitoring"
+  title_en: "zabbix-bgp-ipv4-ipv6-monitoring"
+  summary_es: "Template de Zabbix para monitorear sesiones BGP IPv4/IPv6 en routers Cisco mediante SNMPv2."
+  summary_en: "Zabbix template for monitoring BGP IPv4/IPv6 sessions on Cisco routers using SNMPv2."
+  detail_es: "Diseñado pensando en entornos de IXPs y proveedores."
+  detail_en: "Tailored for IXP and service provider environments."
+
+- id: nettools-pro
+  repo: "https://github.com/C4rlosp/nettools-pro"
+  icon: "⚙️"
+  order: 3
+  pill_es: "Docker · Tools · Testing"
+  pill_en: "Docker · Tools · Testing"
+  title_es: "nettools-pro"
+  title_en: "nettools-pro"
+  summary_es: "Colección de herramientas y contenedores Docker desarrollados para pruebas, validación y automatización de red (CRIXTools)."
+  summary_en: "A collection of Docker-based utilities for network testing, validation and automation (CRIXTools)."
+  detail_es: "Útil para laboratorios, troubleshooting y escenarios de entrenamiento."
+  detail_en: "Useful for labs, troubleshooting and training scenarios."
