@@ -8,23 +8,16 @@
     {% if page.title %}{{ page.title }} | {% endif %}
     Carlos Pérez – Blog Técnico
   </title>
+  <!-- i18n SEO -->
+  <link rel="alternate" hreflang="es" href="{{ '/' | absolute_url }}" />
+  <link rel="alternate" hreflang="en" href="{{ '/index-en/' | absolute_url }}" />
+  <meta name="description" content="{% if page.lang == 'en' %}Technical blog about BGP, RPKI, routing security, IXPs, and automation.{% else %}Blog técnico sobre BGP, RPKI, seguridad de enrutamiento, IXPs y automatización.{% endif %}">
 
-  {%- comment -%}
-  Esto carga la hoja de estilos del tema (por ejemplo, minima).
-  {%- endcomment -%}
+
+ <!-- Estilos --->
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-
-  <style>
-  /* Idioma activo se resalta y no es clickeable */
-  .lang-es .lang-es-link,
-  .lang-en .lang-en-link {
-    font-weight: bold;
-    color: #111 !important;
-    pointer-events: none;
-    text-decoration: none;
-    cursor: default;
-  }
-</style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
   
 </head>
 
@@ -42,3 +35,4 @@
 
 </body>
 </html>
+
