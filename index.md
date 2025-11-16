@@ -1,13 +1,14 @@
 ---
 layout: default
-title: "Carlos Pérez – Blog Técnico"
+title: "Carlos Pérez | Network Engineering Notes"
 lang: es
 alt_lang_url: /index-en
+description: "Notas sobre ingeniería de redes, automatización, monitoreo y peering."
 ---
 
 # 👋 Bienvenido al blog técnico de Carlos Pérez
 
-Analizo temas de **BGP**, **RPKI**, **seguridad de enrutamiento**, IXPs, automatización y experiencias reales operando infraestructura de Internet.
+_Notas sobre ingeniería de redes, automatización, monitoreo y peering._
 
 ## 📌 Artículos publicados
 
