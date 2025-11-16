@@ -586,3 +586,20 @@ header.site-header .site-nav a {
 header.site-header .site-nav a:hover {
   color: #8cc4ff;
 }
+/* ===== Fix iOS móvil: evitar “caja blanca” flotante del menú ===== */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 768px) {
+    header.site-header {
+      /* en iOS móvil: header sencillo, sin blur ni sticky agresivo */
+      position: relative;           /* deja de ser sticky */
+      top: 0;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      box-shadow: none;             /* si llevaba sombra por scroll, la quitamos aquí */
+    }
+
+    .header-flex {
+      overflow: visible;            /* que no recorte y no deje restos */
+    }
+  }
+}
