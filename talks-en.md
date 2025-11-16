@@ -20,8 +20,17 @@ Here you’ll find my participation in international events, conferences, techni
 
 <div class="talks-grid">
   {% for t in talks %}
+
+  {%- comment -%}
+  Si hay external_url, usamos ese.
+  Si no, usamos url interna (por si algún día quieres una página propia).
+  {%- endcomment -%}
+  {% assign talk_link = t.external_url | default: t.url | relative_url %}
+
   <article class="talk-card">
-    <a class="talk-card-link" href="{{ t.url | relative_url }}">
+    <a class="talk-card-link"
+       href="{{ talk_link }}"
+       {% if t.external_url %}target="_blank" rel="noopener"{% endif %}>
 
       {% if t.image %}
       <div class="talk-thumb">
@@ -39,16 +48,18 @@ Here you’ll find my participation in international events, conferences, techni
         <p>{{ t.description }}</p>
 
         <div class="talk-footer">
-          <span class="talk-cta">View details →</span>
+          <span class="talk-cta">
+            {% if page.lang == "es" %}
+              Ver publicación →
+            {% else %}
+              View publication →
+            {% endif %}
+          </span>
         </div>
       </div>
     </a>
-
-    {% if t.external_url %}
-    <a class="talk-external" href="{{ t.external_url }}" target="_blank" rel="noopener">
-      Official event ↗
-    </a>
-    {% endif %}
   </article>
+
   {% endfor %}
 </div>
+
