@@ -410,4 +410,7 @@ a { -webkit-tap-highlight-color: rgba(0,0,0,0); }
 @supports (-webkit-touch-callout: none) {
   header.site-header { background-color: #181818; }
 }
+@media (max-width: 560px) {
+  .language-switch .label-text { display: none; } /* oculta "Idioma:" / "Language:" */
+}
 
