@@ -10,24 +10,37 @@ alt_lang_url: /en/projects/
 
 A continuación encontrarás algunos de los proyectos desarrollados para el IXP y la comunidad técnica, centrados en monitoreo, automatización y redes.
 
----
+{% assign projects = site.data.projects | sort: "order" %}
 
-### 🟢 [zabbix-bgp-monitoring-bird](https://github.com/C4rlosp/zabbix-bgp-monitoring-bird)
-> Monitoreo BGP automatizado en routers **BIRD (IXP – NIC CR)** usando **Zabbix Agent**, scripts y LLD (IPv4/IPv6).  
-> Permite visibilidad detallada del estado de sesiones BGP y detección temprana de fallos.
+<div class="projects-grid">
+  {% for p in projects %}
+    <article class="project-card">
+      <header class="project-header">
+        <span class="project-pill">
+          {{ p.pill_es }}
+        </span>
+        <h2 class="project-title">
+          <a href="{{ p.repo }}" target="_blank" rel="noopener">
+            {{ p.icon }} {{ p.title_es }}
+          </a>
+        </h2>
+      </header>
 
----
+      <p class="project-summary">
+        {{ p.summary_es }}
+      </p>
+      <p class="project-detail">
+        {{ p.detail_es }}
+      </p>
 
-### 🇪🇸 [zabbix-bgp-ipv4-ipv6-monitoring](https://github.com/C4rlosp/zabbix-bgp-ipv4-ipv6-monitoring)
-> Template de **Zabbix** para monitorear sesiones **BGP IPv4/IPv6** en routers Cisco mediante **SNMPv2**.  
-> Soporte para entornos de IXPs.
+      <a class="project-link" href="{{ p.repo }}" target="_blank" rel="noopener">
+        Ver en GitHub →
+      </a>
+    </article>
+  {% endfor %}
+</div>
 
----
-
-### ⚙️ [nettools-pro](https://github.com/C4rlosp/nettools-pro)
-> Colección de herramientas y contenedores **Docker** desarrollados para pruebas, validación y automatización de red (**CRIXTools**).
-
----
-
-✳️ Más proyectos en mi perfil de GitHub: [github.com/C4rlosp](https://github.com/C4rlosp)
-
+<p class="projects-more">
+  ✳️ Más proyectos en mi perfil de GitHub:
+  <a href="https://github.com/C4rlosp" target="_blank" rel="noopener">github.com/C4rlosp</a>
+</p>
