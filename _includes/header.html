@@ -16,9 +16,9 @@
         {% if page.lang == 'en' %}Home{% else %}Inicio{% endif %}
       </a>
 
-      <!-- 👉 Nuevo enlace a proyectos -->
+      <!-- Enlace a proyectos con ícono -->
       <a href="{% if page.lang == 'en' %}{{ '/en/projects/' | relative_url }}{% else %}{{ '/projects/' | relative_url }}{% endif %}">
-        {% if page.lang == 'en' %}Projects{% else %}Proyectos{% endif %}
+        🧩 {% if page.lang == 'en' %}Projects{% else %}Proyectos{% endif %}
       </a>
 
       <span class="divider"></span>
@@ -40,4 +40,5 @@
     </nav>
   </div>
 </header>
+
 
