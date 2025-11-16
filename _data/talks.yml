@@ -9,6 +9,7 @@
   external_url: "https://nic.cr/2025/10/31/nic-costa-rica-comparte-la-experiencia-del-crix-en-lacnic-44-y-lac-ix-technical-meeting/"
   image: "/images/talks/lacnic44.jpg"
   description: "Participación representando a NIC Costa Rica y CRIX en sesiones técnicas de BGP, RPKI y operación de IXPs."
+  published: true
 
 - id: lacnic44-en
   lang: en
@@ -21,6 +22,7 @@
   external_url: "https://nic.cr/2025/10/31/nic-costa-rica-comparte-la-experiencia-del-crix-en-lacnic-44-y-lac-ix-technical-meeting/"
   image: "/images/talks/lacnic44.jpg"
   description: "Participation representing NIC Costa Rica and CRIX in technical sessions about BGP, RPKI validation and IXP operations."
+  published: true
 
 - id: euroix43
   lang: es
@@ -31,6 +33,7 @@
   link: "https://www.euro-ix.net"
   image: "/images/talks/euroix43.jpg"
   description: "Presentación oficial de CRIX en un evento global de IXPs, destacando impacto regional."
+  published: false
 
 - id: euroix43-en
   lang: en
@@ -41,3 +44,4 @@
   link: "https://www.euro-ix.net"
   image: "/images/talks/euroix43.jpg"
   description: "Official CRIX presentation at a global IXP event highlighting regional impact."
+  published: false
