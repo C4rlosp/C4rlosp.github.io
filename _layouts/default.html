@@ -10,6 +10,20 @@
   {%- endcomment -%}
   {% seo %}
 
+  <!-- Imagen y descripción dinámicas para Open Graph -->
+  {% if page.lang == "es" %}
+    <meta property="og:image" content="{{ '/assets/images/og-image-es.png' | absolute_url }}">
+    <meta property="og:description" content="Notas sobre ingeniería de redes, automatización, monitoreo y peering.">
+  {% else %}
+    <meta property="og:image" content="{{ '/assets/images/og-image.png' | absolute_url }}">
+    <meta property="og:description" content="Field notes on network engineering, automation, monitoring, and peering.">
+  {% endif %}
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Carlos Pérez | Network Engineering Notes">
+  <meta property="og:locale" content="{{ page.lang | default: 'es' }}">
+  <meta name="twitter:card" content="summary_large_image">
+
   <!-- i18n alternates -->
   <link rel="alternate" hreflang="es" href="{{ '/' | absolute_url }}">
   <link rel="alternate" hreflang="en" href="{{ '/index-en/' | absolute_url }}">
@@ -25,13 +39,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16.png' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
   <link rel="manifest" href="{{ '/assets/images/site.webmanifest' | relative_url }}">
-  <meta property="og:image" content="{{ '/assets/images/og-image.png' | absolute_url }}">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Carlos Pérez | Network Engineering Notes">
-  <meta property="og:description" content="Field notes on network engineering, automation, monitoring, and peering.">
-  <meta property="og:locale" content="{{ page.lang | default: 'es' }}">
-  <meta name="twitter:card" content="summary_large_image">
-
 </head>
 
 <body class="lang-{{ page.lang | default: 'es' }}">
@@ -48,4 +55,5 @@
 
 </body>
 </html>
+
 
