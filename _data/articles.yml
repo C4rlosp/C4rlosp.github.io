@@ -1,0 +1,19 @@
+- id: rpki-ghost-es
+  lang: es
+  url: "/rpki-ghost/"
+  emoji: "📡"
+  category: "Enrutamiento"
+  date: "2025-11-10"
+  title: "RPKI Ghost: el riesgo invisible en la validación de rutas"
+  excerpt: "Un problema poco visible en la validación de rutas con RPKI que puede hacer que el tráfico legítimo desaparezca sin levantar alarmas."
+  read_time: "10 min"
+
+- id: rpki-ghost-en
+  lang: en
+  url: "/rpki-ghost-en/"
+  emoji: "📡"
+  category: "Routing"
+  date: "2025-11-10"
+  title: "RPKI Ghost: the invisible risk in route validation"
+  excerpt: "A subtle issue in RPKI-based route validation that can silently blackhole legitimate traffic without obvious warnings."
+  read_time: "10 min"
