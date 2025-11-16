@@ -1,5 +1,5 @@
-title: "Carlos Pérez – Blog Técnico"
-description: "Artículos sobre BGP, RPKI, seguridad de enrutamiento, IXPs y operación de redes."
+title: "Carlos Pérez | Network Engineering Notes"
+description: "Notas sobre ingeniería de redes, automatización, monitoreo y peering."
 theme: minima
 
 markdown: kramdown
