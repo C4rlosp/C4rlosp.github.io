@@ -2,6 +2,7 @@
 layout: default
 title: "Carlos Pérez – Blog Técnico"
 lang: en
+alt_lang_url: /index-en
 ---
 
 # 👋 Bienvenido al blog técnico de Carlos Pérez
