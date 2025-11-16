@@ -8,3 +8,14 @@ kramdown:
 
 plugins:
   - jekyll-feed
+
+# 👇 Agrega esto al final del archivo
+defaults:
+  - scope:
+      path: ""          # raíz del sitio, idioma por defecto (español)
+    values:
+      lang: es
+  - scope:
+      path: "en"        # todo lo que esté dentro de /en/ hereda lang: en
+    values:
+      lang: en
