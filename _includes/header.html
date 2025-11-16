@@ -1,38 +1,37 @@
 <header class="site-header" role="banner">
-  <div class="wrapper" style="display: flex; align-items: center; justify-content: space-between;">
-    <!-- Título del sitio -->
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
-      Carlos Pérez – Blog Técnico
+  <div class="wrapper" style="display:flex;align-items:center;justify-content:space-between;">
+    <!-- Marca / link a home según idioma -->
+    <a class="site-title" rel="author"
+       href="{% if page.lang == 'en' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
+      {% if page.lang == 'en' %}
+        Carlos Pérez – Tech Blog
+      {% else %}
+        Carlos Pérez – Blog Técnico
+      {% endif %}
     </a>
 
-    <nav class="site-nav" style="display: flex; align-items: center; gap: 1.5rem;">
-      <!-- Link de inicio -->
-      <a href="{{ "/" | relative_url }}">Inicio</a>
+    <nav class="site-nav" style="display:flex;align-items:center;gap:1.5rem;">
+      <!-- Link de inicio/home según idioma -->
+      <a href="{% if page.lang == 'en' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
+        {% if page.lang == 'en' %}Home{% else %}Inicio{% endif %}
+      </a>
 
       <!-- Separador visual -->
-      <span style="border-left: 1px solid #ddd; height: 1.4rem; margin: 0 .75rem;"></span>
+      <span style="border-left:1px solid #ddd;height:1.4rem;margin:0 .75rem;"></span>
 
-      <!-- Selector de idioma genérico -->
-      <span style="font-size: 0.93rem; white-space: nowrap;">
-        🌐 Language:
-        {% if page.lang == "es" %}
+      <!-- Selector de idioma -->
+      <span style="font-size:.93rem;white-space:nowrap;">
+        {% if page.lang == 'en' %}🌐 Language:{% else %}🌐 Idioma:{% endif %}
+        {% if page.lang == 'es' %}
           <strong>ES</strong> ·
-          {% if page.alt_lang_url %}
-            <a href="{{ page.alt_lang_url | relative_url }}">EN</a>
-          {% else %}
-            <a href="{{ "/index-en" | relative_url }}">EN</a>
-          {% endif %}
-        {% elsif page.lang == "en" %}
-          {% if page.alt_lang_url %}
-            <a href="{{ page.alt_lang_url | relative_url }}">ES</a> ·
-          {% else %}
-            <a href="{{ "/" | relative_url }}">ES</a> ·
-          {% endif %}
+          <a href="{{ page.alt_lang_url | default: '/en/' | relative_url }}">EN</a>
+        {% elsif page.lang == 'en' %}
+          <a href="{{ page.alt_lang_url | default: '/' | relative_url }}">ES</a> ·
           <strong>EN</strong>
         {% else %}
           <!-- Fallback si no se definió lang -->
-          <a href="{{ "/" | relative_url }}">ES</a> ·
-          <a href="{{ "/index-en" | relative_url }}">EN</a>
+          <a href="{{ '/' | relative_url }}">ES</a> ·
+          <a href="{{ '/en/' | relative_url }}">EN</a>
         {% endif %}
       </span>
     </nav>
