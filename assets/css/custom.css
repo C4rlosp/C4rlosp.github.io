@@ -806,3 +806,38 @@ header.site-header .divider {
     display: none;
   }
 }
+/* ================================
+   📌 Placeholder automático artículos
+   ================================ */
+
+.article-thumb.placeholder {
+  width: 100%;
+  height: 160px;
+  background: #f6f7f9;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-content .emoji {
+  font-size: 3rem;
+  opacity: 0.55;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .article-thumb.placeholder {
+    background: #1d1d1d;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .placeholder-content .emoji {
+    opacity: 0.7;
+  }
+}
