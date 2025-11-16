@@ -8,12 +8,6 @@ alt_lang_url: /en/talks/
 
 # 🎤 Charlas y Presentaciones
 
-<div class="page-lang-switch">
-  <a href="{{ page.alt_lang_url | relative_url }}" class="lang-switch-btn">
-    View this page in English →
-  </a>
-</div>
-
 Aquí encontrarás mis participaciones en eventos, conferencias, foros técnicos y presentaciones internacionales sobre IXPs, BGP, RPKI y operación de redes.
 
 {% assign talks = site.data.talks | where: "lang", "es" %}
