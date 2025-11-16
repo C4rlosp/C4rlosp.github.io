@@ -1,29 +1,28 @@
 <header class="site-header" role="banner">
-  <div class="wrapper" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
-    <div class="site-branding">
-      <a class="site-title" href="{{ "/" | relative_url }}" style="font-weight:600;text-decoration:none;">
-        Carlos Pérez – Blog Técnico
-      </a>
-    </div>
+  <div class="wrapper" style="display: flex; align-items: center; justify-content: space-between;">
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+      Carlos Pérez – Blog Técnico
+    </a>
 
-    <nav class="site-nav" style="display:flex;align-items:center;gap:1.5rem;font-size:0.95rem;">
+    <nav class="site-nav" style="display: flex; align-items: center; gap: 1.5rem;">
       <a href="{{ "/" | relative_url }}">Inicio</a>
 
       {% if page.alt_lang_url %}
-  <span style="border-left:1px solid #ddd;height:1.4rem;margin:0 .75rem;"></span>
+        <span style="border-left: 1px solid #ddd; height: 1.4rem; margin: 0 .75rem;"></span>
 
-  <span style="font-size:0.93rem;">
-    {% if page.lang == "es" %}
-      🌐 Language:
-      <strong style="color:#111;">ES</strong> · 
-      <a href="{{ page.alt_lang_url | relative_url }}">EN</a>
-    {% elsif page.lang == "en" %}
-      🌐 Language:
-      <a href="{{ page.alt_lang_url | relative_url }}">ES</a> · 
-      <strong style="color:#111;">EN</strong>
-    {% endif %}
-  </span>
-{% endif %}
+        <span style="font-size: 0.93rem; white-space: nowrap;">
+          🌐 Language:
+          {% if page.lang == "es" %}
+            <strong style="color:#111;">ES</strong> ·
+            <a href="{{ page.alt_lang_url | relative_url }}">EN</a>
+          {% elsif page.lang == "en" %}
+            <a href="{{ page.alt_lang_url | relative_url }}">ES</a> ·
+            <strong style="color:#111;">EN</strong>
+          {% else %}
+            <a href="{{ page.alt_lang_url | relative_url }}">EN</a>
+          {% endif %}
+        </span>
+      {% endif %}
     </nav>
   </div>
 </header>
