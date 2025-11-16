@@ -19,7 +19,7 @@ Here are some of the open-source tools and monitoring templates developed for IX
 
 ### 🇬🇧 [zabbix-bgp-ipv4-ipv6-monitoring](https://github.com/C4rlosp/zabbix-bgp-ipv4-ipv6-monitoring)
 > **Zabbix template** for monitoring **BGP IPv4/IPv6** sessions on Cisco routers via **SNMPv2**.  
-> Includes bilingual documentation (Spanish/English) and IXP-oriented configurations.
+> Support IXP-oriented configurations.
 
 ---
 
