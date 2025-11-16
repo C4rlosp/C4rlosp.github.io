@@ -265,4 +265,50 @@ h1, h2, h3 {
     color: #ffffff !important;
   }
 }
+/* Título largo del header: mantener en una línea si hay espacio */
+.site-title {
+  white-space: nowrap;
+  max-width: clamp(280px, 40vw, 620px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.15rem;   /* un pelín más pequeño para que quepa */
+  line-height: 1.2;
+}
+
+/* En pantallas pequeñas permitimos dos líneas bonitas */
+@media (max-width: 640px) {
+  .site-title {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+    font-size: 1.05rem;
+  }
+}
+/* Blockquote del subtítulo */
+.page-content blockquote {
+  border-left: 3px solid #3a3a3a;
+  margin: 0.75rem 0 1.5rem;
+  padding: 0.5rem 0 0.5rem 0.9rem;
+  color: #cfcfcf;
+}
+@media (prefers-color-scheme: dark) {
+  .page-content blockquote {
+    border-left-color: #2f2f2f;
+    color: #c8c8c8;
+  }
+}
+.site-footer {
+  margin-top: 2.25rem;
+}
+@media (prefers-color-scheme: dark) {
+  .site-footer .wrapper {
+    color: #d5d5d5;
+  }
+  .site-footer a {
+    color: #8cc4ff;
+  }
+  .site-footer a:hover {
+    color: #b8dcff;
+  }
+}
 
