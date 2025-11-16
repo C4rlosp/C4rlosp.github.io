@@ -603,3 +603,85 @@ header.site-header .site-nav a:hover {
     }
   }
 }
+/* ========== Projects layout ========== */
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  border-radius: 0.9rem;
+  border: 1px solid #e2e2e2;
+  padding: 1rem 1.3rem;
+  background: #fcfcfc;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.project-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.project-title {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.project-title a {
+  font-weight: 600;
+}
+
+.project-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  background: #eef6ff;
+  color: #145a9d;
+  letter-spacing: 0.02em;
+}
+
+.project-summary {
+  margin: 0.4rem 0 0.1rem;
+}
+
+.project-detail {
+  margin: 0.1rem 0 0.6rem;
+  color: #666;
+  font-size: 0.92rem;
+}
+
+.project-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Nota final */
+.projects-more {
+  margin-top: 1.8rem;
+  font-size: 0.92rem;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .project-card {
+    background: #181818;
+    border-color: #333;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.6);
+  }
+
+  .project-pill {
+    background: #12314f;
+    color: #d1e5ff;
+  }
+
+  .project-detail {
+    color: #b3b3b3;
+  }
+}
