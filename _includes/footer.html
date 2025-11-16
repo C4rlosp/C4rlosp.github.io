@@ -1,5 +1,5 @@
-<footer class="site-footer" role="contentinfo" style="margin-top:3rem;padding:1.5rem 0;border-top:1px solid #eee;font-size:0.9rem;">
-  <div class="wrapper" style="display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:flex-start;">
+<footer class="site-footer" role="contentinfo">
+  <div class="wrapper footer-grid">
     <div>
       <strong>
         {% if page.lang == 'en' %}Carlos Pérez – Tech Blog{% else %}Carlos Pérez – Blog Técnico{% endif %}
@@ -13,20 +13,36 @@
 
     <div>
       <strong>{% if page.lang == 'en' %}Contact{% else %}Contacto{% endif %}</strong><br>
-      LinkedIn:
-      <a href="https://www.linkedin.com/in/carlos-ernesto-pérez-pérez-442900123" target="_blank" rel="noopener">
-        carlos-ernesto-pérez-pérez-442900123
-      </a><br>
-      GitHub: <a href="https://github.com/C4rlosp" target="_blank" rel="noopener">C4rlosp</a>
+
+      <!-- LinkedIn -->
+      <a class="social" href="https://www.linkedin.com/in/carlos-ernesto-pérez-pérez-442900123"
+         target="_blank" rel="noopener" aria-label="LinkedIn">
+        <!-- ícono LinkedIn (SVG) -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5zm.02 5.75H2V22h3V9.25zM8 9.25V22h3v-6.7c0-1.78.92-2.9 2.39-2.9 1.11 0 1.61.79 1.61 2.9V22h3v-7.61c0-3.6-1.92-5.29-4.48-5.29-2.08 0-3.01 1.16-3.52 1.97h-.05V9.25H8z"/></svg>
+        LinkedIn
+      </a>
+
+      <span class="sep">·</span>
+
+      <!-- GitHub -->
+      <a class="social" href="https://github.com/C4rlosp"
+         target="_blank" rel="noopener" aria-label="GitHub">
+        <!-- ícono GitHub (SVG) -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.1c-3.22.7-3.91-1.41-3.91-1.41-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.8 2.73 1.28 3.4.98.11-.76.41-1.28.74-1.58-2.57-.29-5.27-1.29-5.27-5.72 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .98-.31 3.21 1.18a11.1 11.1 0 0 1 5.85 0c2.23-1.49 3.2-1.18 3.2-1.18.63 1.59.24 2.76.12 3.05.74.8 1.19 1.82 1.19 3.08 0 4.44-2.71 5.43-5.29 5.71.42.36.79 1.06.79 2.14v3.17c0 .31.2.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+        GitHub
+      </a>
     </div>
 
-    <div style="opacity:0.8;">
+    <div class="legal">
       © {{ site.time | date: "%Y" }} Carlos Pérez.<br>
       {% if page.lang == 'en' %}
-        Published with <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> and Jekyll.
+        Published with <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
+        <span class="nbsp"> </span>and <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a>.
       {% else %}
-        Publicado con <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> y Jekyll.
+        Publicado con <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
+        <span class="nbsp"> </span>y <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a>.
       {% endif %}
     </div>
   </div>
 </footer>
+
