@@ -4,9 +4,10 @@ layout: default
 
 <div class="talk-wrapper">
 
+  <!-- Language Switch -->
   {% assign alt = site.data.talks | where: "id", page.alt_lang_id | first %}
   {% if alt %}
-  <div class="article-lang-switch">
+  <div class="page-lang-switch">
     {% if page.lang == "es" %}
       <a href="{{ alt.url | relative_url }}" class="lang-switch-btn">View in English →</a>
     {% else %}
@@ -15,22 +16,27 @@ layout: default
   </div>
   {% endif %}
 
+  <!-- Talk Title -->
   <h1 class="talk-title">{{ page.title }}</h1>
 
+  <!-- Meta info -->
   <p class="talk-meta">
     <strong>{{ page.event }}</strong> · {{ page.date }} · {{ page.location }}
   </p>
 
+  <!-- Hero Image -->
   {% if page.image %}
   <div class="talk-image">
-    <img src="{{ page.image }}" alt="{{ page.title }}">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
   </div>
   {% endif %}
 
+  <!-- Main Content -->
   <div class="talk-content">
     {{ content }}
   </div>
 
+  <!-- Optional reference section -->
   {% if page.reference %}
   <p class="talk-reference">
     🔗 <a href="{{ page.reference.url }}" target="_blank">{{ page.reference.label }}</a>
