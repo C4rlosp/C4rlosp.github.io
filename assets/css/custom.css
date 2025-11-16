@@ -462,3 +462,95 @@ header.site-header {
     margin-top: 0.25rem;
   }
 }
+/* ===============================
+   🌐 Header Responsive + iOS Fix
+   =============================== */
+
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: #181818;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* iOS Safari */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto sombra al hacer scroll */
+header.site-header.scrolled {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+  background-color: rgba(18, 18, 18, 0.97);
+}
+
+/* Contenedor del header */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* permite que el nav baje */
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  overflow: hidden; /* evita desbordes blancos */
+}
+
+/* Título */
+.site-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: clamp(240px, 60vw, 620px);
+  line-height: 1.2;
+}
+
+/* Variante larga/corta del título */
+.site-title .title-full { display: inline; }
+.site-title .title-short { display: none; }
+
+/* Navegación */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.divider {
+  border-left: 1px solid #444;
+  height: 1.2rem;
+  margin: 0 .5rem;
+}
+
+/* Responsive */
+@media (max-width: 560px) {
+  .site-title { max-width: 66vw; font-size: 1.06rem; }
+  .site-title .title-full { display: none; }
+  .site-title .title-short { display: inline; }
+  .divider { display: none; }
+  .site-nav { gap: .7rem; }
+  .site-nav a { padding: 4px 0; }
+}
+
+@media (max-width: 360px) {
+  .site-title { max-width: 64vw; font-size: 1rem; }
+  .language-switch { font-size: .95rem; }
+}
+
+/* iOS Safari: render fix */
+@supports (-webkit-touch-callout: none) {
+  header.site-header {
+    background-color: rgba(24, 24, 24, 0.98);
+    -webkit-transform: translateZ(0);
+  }
+}
+
+/* Quita highlight blanco al tocar */
+a { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+
+/* ============================
+   🌑 Header sombra en scroll
+   ============================ */
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header.site-header');
+  if (window.scrollY > 10) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+});
