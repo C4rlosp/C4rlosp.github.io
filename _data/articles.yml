@@ -18,4 +18,4 @@
   title: "RPKI Ghost: the invisible risk in route validation"
   excerpt: "A subtle issue in RPKI-based route validation that can silently blackhole legitimate traffic without obvious warnings."
   read_time: "10 min"
-  image: "/images/articles/rpki-ghost-es-thumb.jpg"   # 👈 opcional
+  image: "/images/rpki-ghost-cover.png/"   # 👈 opcional
