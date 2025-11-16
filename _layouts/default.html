@@ -25,6 +25,13 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16.png' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
   <link rel="manifest" href="{{ '/assets/images/site.webmanifest' | relative_url }}">
+  <meta property="og:image" content="{{ '/assets/images/og-image.png' | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Carlos Pérez | Network Engineering Notes">
+  <meta property="og:description" content="Field notes on network engineering, automation, monitoring, and peering.">
+  <meta property="og:locale" content="{{ page.lang | default: 'es' }}">
+  <meta name="twitter:card" content="summary_large_image">
+
 </head>
 
 <body class="lang-{{ page.lang | default: 'es' }}">
