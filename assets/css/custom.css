@@ -177,13 +177,7 @@ h1, h2, h3 {
 .site-footer .social[aria-label="LinkedIn"] .icon {
   top: 1px; /* corrige el leve salto visual */
 }
-/* Efectos hover sutiles por marca */
-.site-footer .social[aria-label="LinkedIn"]:hover {
-  color: #0A66C2; /* azul oficial LinkedIn */
-}
-.site-footer .social[aria-label="GitHub"]:hover {
-  color: #24292f; /* gris GitHub */
-}
+
 .site-footer {
   margin-top: 2.5rem;
 }
