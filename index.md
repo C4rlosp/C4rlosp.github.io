@@ -17,4 +17,4 @@ Analizo temas de **BGP**, **RPKI**, **seguridad de enrutamiento**, IXPs, automat
 
 Gracias por visitar este sitio.  
 Conectemos en LinkedIn:  
-[linkedin.com/in/carlos-ernesto-pérez-pérez-442900123](https://linkedin.com/in/carlos-ernesto-pérez-p%C3%A9rez-p%C3%A1rez-442900123)
+[linkedin.com/in/carlos-ernesto-pérez-pérez-442900123]([https://linkedin.com/in/carlos-ernesto-pérez-p%C3%A9rez-p%C3%A1rez-442900123](https://www.linkedin.com/in/carlos-ernesto-p%C3%A9rez-p%C3%A9rez-442900123/))
