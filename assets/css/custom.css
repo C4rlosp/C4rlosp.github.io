@@ -781,6 +781,31 @@ hr {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+/* ===== Talks: dark mode ===== */
+@media (prefers-color-scheme: dark) {
+  .talk-card {
+    background: #181818;
+    border: 1px solid #333;
+    box-shadow: 0 10px 32px rgba(0,0,0,0.75);
+  }
+
+  .talk-body {
+    color: #e5e5e5;
+  }
+
+  .talk-meta {
+    color: rgba(255,255,255,0.7);
+  }
+
+  .talk-title {
+    color: #ffffff;
+  }
+
+  .talk-link,
+  .talk-footer {
+    color: #8cc4ff;
+  }
+}
 
 /* ===============================
    🌐 Language Switch (Talks pages)
