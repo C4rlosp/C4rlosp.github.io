@@ -1062,6 +1062,7 @@ header.site-header .language-switch strong {
   cursor: pointer;
   padding: 0.4rem;
   margin-left: auto;
+  color: #111111;     /* 👈 líneas negras / gris oscuro */
 }
 
 .menu-toggle span {
@@ -1088,6 +1089,24 @@ header.site-header .language-switch strong {
 
 .menu-toggle.is-open span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Modo oscuro: líneas blancas */
+@media (prefers-color-scheme: dark) {
+  .menu-toggle {
+    color: #f5f5f5;
+  }
+}
+
+/* Móvil: botoncito suave estilo dominios.cr */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+  }
 }
 
 /* ===========================
