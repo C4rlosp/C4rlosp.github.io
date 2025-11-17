@@ -911,7 +911,7 @@ hr {
 /* ============================================
    🧱 Header limpio: oscuro, sin borde y centrado
    ============================================ */
-
+/*
 header.site-header {
   position: sticky;
   top: 0;
@@ -922,6 +922,7 @@ header.site-header {
   outline: 0;
   box-shadow: 0 1px 2px rgba(0,0,0,0.45);
 }
+*/
 
 header.site-header .wrapper {
   max-width: 960px;
@@ -1077,6 +1078,56 @@ header.site-header .wrapper {
   }
 
   body > header.site-header .language-switch {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+}
+/* 🚑 FIX FINAL HEADER EN MÓVIL + DESKTOP */
+
+/* El header deja de ser sticky y pierde el “tarjetón” blanco */
+header.site-header {
+  position: static !important;              /* que ya no flote encima del contenido */
+  top: auto !important;
+  background-color: #181818 !important;     /* barra oscura */
+  color: #f5f5f5 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* El wrapper interno es el que el tema hace blanco y con bordes redondeados */
+header.site-header .wrapper {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0.6rem 1rem !important;
+  background-color: #181818 !important;     /* mismo tono oscuro */
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Layout centrado en móvil para que “Home”/“Inicio” no quede pegado a la izquierda */
+@media (max-width: 768px) {
+  header.site-header .header-flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.45rem;
+  }
+
+  header.site-header nav.site-nav {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    gap: 0.7rem;
+  }
+
+  header.site-header .language-switch {
     width: 100%;
     display: flex;
     justify-content: center;
