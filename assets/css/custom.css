@@ -1038,3 +1038,48 @@ header.site-header .wrapper {
     gap: 0.3rem;
   }
 }
+/* 🔚 Override definitivo del header en móvil:
+   sin tarjeta blanca, fondo oscuro plano y centrado */
+@media (max-width: 768px) {
+  body > header.site-header {
+    position: static !important;           /* que no se pegue arriba */
+    background-color: #181818 !important;  /* mismo fondo que el sitio */
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body > header.site-header .wrapper {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0.6rem 1rem !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  body > header.site-header .header-flex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.45rem;
+  }
+
+  body > header.site-header nav.site-nav {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    gap: 0.7rem;
+  }
+
+  body > header.site-header .language-switch {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+}
