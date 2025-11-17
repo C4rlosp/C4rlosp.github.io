@@ -1156,3 +1156,23 @@ header.site-header .language-switch strong {
     }
   }
 }
+.language-switch {
+  white-space: nowrap;
+  font-size: 0.93rem;
+}
+
+.language-switch .lang-switch-link {
+  font-weight: 600;
+  margin-left: 0.35rem;
+  color: #0066cc;
+}
+
+.language-switch .lang-switch-link:hover {
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .language-switch .lang-switch-link {
+    color: #8cc4ff;
+  }
+}
