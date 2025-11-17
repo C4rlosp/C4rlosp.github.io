@@ -1157,3 +1157,87 @@ header.site-header .wrapper {
     justify-content: center;
   }
 }
+/* =================================================
+   🧨 Fix header: quitar panel/borde blanco en móvil
+   ================================================= */
+
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: #181818;
+  color: #f5f5f5;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.45);
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* El .wrapper dentro del header es el que está creando
+   ese rectángulo con borde blanco en iOS */
+header.site-header .wrapper {
+  background: transparent !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* ======================================
+   📱 Header móvil centrado y sin “pegote”
+   ====================================== */
+
+@media (max-width: 640px) {
+  header.site-header .wrapper {
+    padding: 0.6rem 1rem !important;
+  }
+
+  .header-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* centra horizontal */
+    justify-content: center;  /* por si acaso */
+    gap: 0.45rem;
+    text-align: center;
+  }
+
+  nav.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;  /* que "Inicio" no quede tan a la izquierda */
+    text-align: center;
+    margin: 0;
+  }
+
+  nav.site-nav a {
+    padding: 0.15rem 0.4rem;
+  }
+
+  .language-switch {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 0.25rem;
+  }
+}
+
+/* ============================================
+   🎨 "Idioma" con el mismo azul que los links
+   ============================================ */
+
+/* Necesita que en header.html “Idioma:” esté en un span.label-text */
+.site-header .language-switch .label-text {
+  color: #4da3ff;
+}
+
+/* Idioma activo (ES / EN) bien marcado */
+.lang-es .lang-es-link,
+.lang-en .lang-en-link {
+  font-weight: 700;
+  color: #ffffff !important;
+  pointer-events: none;
+  text-decoration: none;
+  cursor: default;
+}
