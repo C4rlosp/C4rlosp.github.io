@@ -1,80 +1,93 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: 'es' }}">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<header class="site-header" role="banner">
+  <div class="wrapper header-flex">
 
-  {%- comment -%}
-  SEO automático (title, description, canonical, Open Graph, Twitter Cards, JSON-LD)
-  Requiere jekyll-seo-tag en _config.yml
-  {%- endcomment -%}
-  {% seo %}
+    <!-- Marca / título -->
+    <a class="site-title" rel="author"
+       href="{% if page.lang == 'en' %}{{ '/index-en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}"
+       aria-label="Carlos Pérez | Network Engineering Notes">
+      <span class="title-full">Carlos Pérez&nbsp;|&nbsp;Network Engineering Notes</span>
+      <span class="title-short">Carlos Pérez&nbsp;|&nbsp;NetEng Notes</span>
+    </a>
 
-  <!-- Imagen y descripción dinámicas para Open Graph -->
-  {% if page.lang == "es" %}
-  <meta property="og:image" content="{{ '/assets/images/og-image-es.png' | absolute_url }}">
-  <meta property="og:description" content="Notas sobre ingeniería de redes, automatización, monitoreo y peering.">
-  {% else %}
-  <meta property="og:image" content="{{ '/assets/images/og-image-en.png' | absolute_url }}">
-  <meta property="og:description" content="Field notes on network engineering, automation, monitoring, and peering.">
-  {% endif %}
+    <!-- Botón hamburguesa (solo aparece en móvil por CSS) -->
+    <button class="menu-toggle" type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="main-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-  {% if page.lang == "es" %}
-  <meta name="description" content="Blog técnico sobre BGP, RPKI, IXPs, automatización, monitoreo y seguridad en infraestructura de Internet.">
-  {% else %}
-  <meta name="description" content="Technical blog about BGP, RPKI, IXPs, automation, monitoring, and Internet infrastructure security.">
-  {% endif %}
+    <!-- Navegación principal -->
+    <nav id="main-nav" class="site-nav">
+      <!-- Inicio -->
+      <a href="{% if page.lang == 'en' %}{{ '/index-en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
+        {% if page.lang == 'en' %}Home{% else %}Inicio{% endif %}
+      </a>
 
+      <!-- Ejemplos de otros links (ajusta a tu gusto) -->
+      <a href="{% if page.lang == 'en' %}{{ '/articles-en/' | relative_url }}{% else %}{{ '/articulos/' | relative_url }}{% endif %}">
+        {% if page.lang == 'en' %}Articles{% else %}Artículos{% endif %}
+      </a>
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Carlos Pérez | Network Engineering Notes">
-  <meta property="og:locale" content="{{ page.lang | default: 'es' }}">
-  <meta name="twitter:card" content="summary_large_image">
+      <a href="{% if page.lang == 'en' %}{{ '/projects-en/' | relative_url }}{% else %}{{ '/proyectos/' | relative_url }}{% endif %}">
+        {% if page.lang == 'en' %}Projects{% else %}Proyectos{% endif %}
+      </a>
 
-  <!-- i18n alternates -->
-  <link rel="alternate" hreflang="es" href="{{ '/' | absolute_url }}">
-  <link rel="alternate" hreflang="en" href="{{ '/index-en/' | absolute_url }}">
+      <a href="{% if page.lang == 'en' %}{{ '/talks-en/' | relative_url }}{% else %}{{ '/charlas/' | relative_url }}{% endif %}">
+        {% if page.lang == 'en' %}Talks{% else %}Charlas{% endif %}
+      </a>
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="{{ '/assets/main.css'?v2 | relative_url }}">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/custom.css?v=6' | relative_url }}">
+      <!-- Separador -->
+      <span class="divider"></span>
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32.png' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16.png' | relative_url }}">
-  <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
-  <link rel="manifest" href="{{ '/assets/images/site.webmanifest' | relative_url }}">
+      <!-- Selector de idioma -->
+      <span class="language-switch">
+        {% if page.lang == 'en' %}
+          <a href="{{ page.alt_lang_url | relative_url }}" class="lang-es-link">ES</a> ·
+          <strong class="lang-en-link">EN</strong>
+        {% else %}
+          <strong class="lang-es-link">ES</strong> ·
+          <a href="{{ page.alt_lang_url | relative_url }}" class="lang-en-link">EN</a>
+        {% endif %}
+      </span>
+    </nav>
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4SVJLLT35D"></script>
+  </div>
+</header>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4SVJLLT35D');
-</script>
-<!-- End Google Analytics -->
-</head>
-
-<body class="lang-{{ page.lang | default: 'es' }}">
-
-  {% include header.html %}
-
-  <main class="page-content" aria-label="Content">
-    <div class="wrapper">
-      {{ content }}
-    </div>
-  </main>
-
-  {% include footer.html %}
-<script>
-  window.addEventListener('scroll', () => {
+  document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('header.site-header');
-    if (!header) return;
-    if (window.scrollY > 10) header.classList.add('scrolled');
-    else header.classList.remove('scrolled');
+
+    // Efecto "scrolled" (si lo quieres seguir usando)
+    if (header) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+      });
+    }
+
+    // 🟦 Lógica del menú hamburguesa
+    const toggle = document.querySelector('.menu-toggle');
+    const nav    = document.getElementById('main-nav');
+
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener('click', function () {
+      const isOpen = nav.classList.toggle('is-open');
+      toggle.classList.toggle('is-open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Opcional: cerrar menú si cambia el tamaño a desktop
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 768 && nav.classList.contains('is-open')) {
+        nav.classList.remove('is-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
   });
 </script>
 </body>
