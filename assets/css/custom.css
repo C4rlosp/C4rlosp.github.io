@@ -700,119 +700,7 @@ hr {
     border-top-color: rgba(255,255,255,0.10);
   }
 }
-/* ==========================================
-   🧱 Header definitivo: fondo negro sólido
-   ========================================== */
-header.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-  background-color: #181818;
-  color: #f5f5f5;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.45);
-}
-/* Mobile: header NO sticky para que no se vea bloque raro */
-@media (max-width: 768px) {
-  header.site-header {
-    position: static;
-    box-shadow: none;   /* sin sombra dura en mobile */
-  }
-}
 
-/* Layout del header */
-.header-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.75rem 1rem;
-  flex-wrap: wrap;
-}
-
-/* Título del sitio */
-.site-title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: clamp(240px, 60vw, 620px);
-  line-height: 1.2;
-  font-size: 1.06rem;
-  color: #f2f2f2;
-  text-decoration: none;
-}
-
-.site-title .title-full { display: inline; }
-.site-title .title-short { display: none; }
-
-.site-title:hover {
-  color: #ffffff;
-}
-
-/* Menú principal */
-.site-nav {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  flex-wrap: wrap;
-  font-size: 0.95rem;
-}
-
-.site-nav a {
-  color: #4da3ff;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.site-nav a:hover {
-  color: #8cc4ff;
-  text-decoration: underline;
-}
-
-/* Divider vertical */
-header.site-header .divider {
-  border-left: 1px solid #444;
-  height: 1.2rem;
-  margin: 0 0.5rem;
-}
-
-/* Selector de idioma */
-.site-header .language-switch {
-  white-space: nowrap;
-  font-size: 0.93rem;
-  color: #f5f5f5;
-}
-
-.site-header .language-switch a {
-  color: #f5f5f5;
-  text-decoration: none;
-}
-
-.site-header .language-switch a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-/* Responsive: compacto en pantallas pequeñas */
-@media (max-width: 560px) {
-  .site-title { max-width: 66vw; font-size: 1.02rem; }
-  .site-title .title-full { display: none; }
-  .site-title .title-short { display: inline; }
-  header.site-header .divider { display: none; }
-  .site-nav { gap: .7rem; }
-  .site-nav a { padding: 4px 0; }
-}
-
-@media (max-width: 360px) {
-  .site-title { max-width: 64vw; font-size: 0.98rem; }
-  .language-switch { font-size: .95rem; }
-}
-
-/* Ocultar label "Idioma / Language" en móvil si usas .label-text */
-@media (max-width: 560px) {
-  .language-switch .label-text {
-    display: none;
-  }
-}
 /* ================================
    📌 Placeholder automático artículos
    ================================ */
@@ -992,174 +880,9 @@ header.site-header .divider {
 .page-content .wrapper {
   max-width: 980px;
 }
-/* ===== Talks: dark mode definitivo ===== */
-@media (prefers-color-scheme: dark) {
-  .talk-card {
-    background: #181818 !important;
-    border-color: #333 !important;
-    box-shadow: 0 10px 26px rgba(0,0,0,0.75) !important;
-  }
-
-  .talk-body {
-    color: #e5e5e5;
-  }
-
-  .talk-meta {
-    color: rgba(255,255,255,0.7);
-  }
-
-  .talk-footer {
-    color: #8cc4ff;
-  }
-}
-
-
-/* ===== Header en móvil: menos pesado ===== */
-@media (max-width: 640px) {
-  header.site-header {
-    position: static !important;
-    box-shadow: none !important;
-    border-bottom: 1px solid #222 !important;
-  }
-}
-/* ===== Fix header en móvil + color de "Idioma" ===== */
-
-/* Fuerza el fondo del header en móvil para que no quede ese bloque blanco */
-@media (max-width: 640px) {
-  header.site-header,
-  header.site-header .wrapper {
-    background-color: #111 !important;  /* mismo tono que el fondo de la página */
-    box-shadow: none !important;
-    border-bottom: 1px solid #222 !important;
-  }
-}
-
-/* "Idioma" con el mismo azul de los demás enlaces del menú */
-.site-header .language-switch,
-.site-header .language-switch .label-text {
-  color: #4da3ff !important;
-}
-
-.site-header .language-switch a {
-  color: #4da3ff !important;
-}
-
-.site-header .language-switch a:hover {
-  color: #8cc4ff !important;
-}
-/* ✅ Kill rectángulo blanco del header en móvil y desktop */
-
-/* Fondo oscuro para TODO el header y sus hijos directos */
-header.site-header,
-header.site-header .wrapper,
-header.site-header .header-flex,
-header.site-header .site-nav,
-header.site-header .language-switch {
-  background-color: #111111 !important;
-}
-
-/* Quitar cualquier borde raro y sombra fuerte */
-header.site-header {
-  border-bottom: 1px solid #222 !important;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.45) !important;
-}
-
-/* En móvil a veces el wrapper trae fondo blanco: lo anulamos igual */
-@media (max-width: 640px) {
-  header.site-header,
-  header.site-header .wrapper,
-  header.site-header .header-flex {
-    background-color: #111111 !important;
-  }
-}
-/* 🚫 Quitar el marco/blanco alrededor del header */
-
-header.site-header,
-header.site-header .wrapper,
-header.site-header .header-flex {
-  border: none !important;
-  outline: none !important;
-}
-
-/* En caso de que el tema meta bordes arriba/abajo */
-header.site-header {
-  border-top: none !important;
-  border-bottom: none !important;
-}
-
-/* En móvil, sin sombras para evitar el efecto "tarjeta" */
-@media (max-width: 640px) {
-  header.site-header {
-    box-shadow: none !important;
-  }
-}
-/* ⭐ Mejor alineación del menú en móvil */
-@media (max-width: 640px) {
-  /* Centrar el contenedor del menú */
-  .site-nav {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-  }
-
-  /* Centrar cada enlace */
-  .site-nav a {
-    text-align: center;
-  }
-
-  /* Centrar el selector de idioma también */
-  .language-switch {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-  }
-
-  /* Quitar alineación dura a la izquierda del header-flex */
-  .header-flex {
-    justify-content: center;
-  }
-}
-/* 🧨 Nuke total del borde blanco del header */
-header.site-header,
-header.site-header .wrapper {
-  border: 0 !important;
-  outline: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.45); /* deja solo la sombrita */
-  background-color: #181818;               /* mismo color que el body oscuro */
-}
-/* 📱 Header móvil más limpio y centrado */
-@media (max-width: 640px) {
-  header.site-header .wrapper {
-    padding: 0.55rem 1rem;
-  }
-
-  .header-flex {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-  }
-
-  .site-nav {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .site-nav a {
-    padding: 0.1rem 0.4rem;
-  }
-
-  .language-switch {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-  }
-}
-/* =================================================
-   🧨 Fix header: quitar panel/borde blanco en móvil
-   ================================================= */
+/* ============================================
+   🧱 Header limpio: oscuro, sin borde y centrado
+   ============================================ */
 
 header.site-header {
   position: sticky;
@@ -1167,77 +890,123 @@ header.site-header {
   z-index: 9999;
   background-color: #181818;
   color: #f5f5f5;
+  border: 0;
+  outline: 0;
   box-shadow: 0 1px 2px rgba(0,0,0,0.45);
-  border: 0 !important;
-  outline: 0 !important;
-  border-radius: 0 !important;
 }
 
-/* El .wrapper dentro del header es el que está creando
-   ese rectángulo con borde blanco en iOS */
 header.site-header .wrapper {
-  background: transparent !important;
-  border: 0 !important;
-  outline: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.6rem 1rem;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
 }
 
-/* ======================================
-   📱 Header móvil centrado y sin “pegote”
-   ====================================== */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
+/* Título del sitio */
+.site-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: clamp(240px, 60vw, 620px);
+  line-height: 1.2;
+  font-size: 1.06rem;
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+.site-title:hover {
+  color: #ffffff;
+}
+
+/* Menú principal */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+}
+
+.site-nav a {
+  color: #4da3ff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: #8cc4ff;
+  text-decoration: underline;
+}
+
+/* Selector de idioma (tu <span class="language-switch">) */
+.site-header .language-switch {
+  white-space: nowrap;
+  font-size: 0.93rem;
+  color: #4da3ff;
+}
+
+.site-header .language-switch a {
+  color: #4da3ff;
+}
+
+.site-header .language-switch a:hover {
+  color: #8cc4ff;
+  text-decoration: underline;
+}
+
+/* El idioma activo ya lo marcas con <strong> en header.html */
+.site-header .language-switch strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ==============================
+   📱 Versión móvil centrada
+   ============================== */
 @media (max-width: 640px) {
+  header.site-header {
+    position: static;         /* en móvil que no sea sticky */
+    box-shadow: none;
+  }
+
   header.site-header .wrapper {
-    padding: 0.6rem 1rem !important;
+    padding: 0.6rem 1rem;
   }
 
   .header-flex {
-    display: flex;
     flex-direction: column;
-    align-items: center;      /* centra horizontal */
-    justify-content: center;  /* por si acaso */
-    gap: 0.45rem;
+    align-items: center;
     text-align: center;
+    gap: 0.45rem;
+  }
+
+  .site-title {
+    max-width: 80vw;
+    font-size: 1.02rem;
   }
 
   nav.site-nav {
-    display: flex;
-    flex-wrap: wrap;
     width: 100%;
-    justify-content: center;  /* que "Inicio" no quede tan a la izquierda */
+    justify-content: center;
     text-align: center;
-    margin: 0;
-  }
-
-  nav.site-nav a {
-    padding: 0.15rem 0.4rem;
+    gap: 0.7rem;
   }
 
   .language-switch {
     width: 100%;
     display: flex;
     justify-content: center;
-    text-align: center;
-    gap: 0.25rem;
+    gap: 0.3rem;
   }
-}
-
-/* ============================================
-   🎨 "Idioma" con el mismo azul que los links
-   ============================================ */
-
-/* Necesita que en header.html “Idioma:” esté en un span.label-text */
-.site-header .language-switch .label-text {
-  color: #4da3ff;
-}
-
-/* Idioma activo (ES / EN) bien marcado */
-.lang-es .lang-es-link,
-.lang-en .lang-en-link {
-  font-weight: 700;
-  color: #ffffff !important;
-  pointer-events: none;
-  text-decoration: none;
-  cursor: default;
 }
