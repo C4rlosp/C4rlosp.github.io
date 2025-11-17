@@ -259,19 +259,24 @@ h1, h2, h3 {
     font-size: 1.05rem;
   }
 }
-/* Blockquote del subtítulo */
+/* ===== Citas (>) más legibles ===== */
 .page-content blockquote {
-  border-left: 3px solid #3a3a3a;
-  margin: 0.75rem 0 1.5rem;
-  padding: 0.5rem 0 0.5rem 0.9rem;
-  color: #cfcfcf;
+  border-left: 3px solid #444;
+  margin: 1rem 0 1.6rem;
+  padding: 0.6rem 0 0.6rem 1rem;
+  color: #555;          /* antes súper claro */
+  font-style: italic;
+  font-weight: 400;
 }
+
+/* Dark mode – buena visibilidad */
 @media (prefers-color-scheme: dark) {
   .page-content blockquote {
-    border-left-color: #2f2f2f;
-    color: #c8c8c8;
+    border-left-color: #666;
+    color: #ddd;
   }
 }
+
 .site-footer {
   margin-top: 2.25rem;
 }
