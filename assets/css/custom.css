@@ -992,3 +992,33 @@ header.site-header .divider {
 .page-content .wrapper {
   max-width: 980px;
 }
+/* ===== Talks: dark mode definitivo ===== */
+@media (prefers-color-scheme: dark) {
+  .talk-card {
+    background: #181818 !important;
+    border-color: #333 !important;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.75) !important;
+  }
+
+  .talk-body {
+    color: #e5e5e5;
+  }
+
+  .talk-meta {
+    color: rgba(255,255,255,0.7);
+  }
+
+  .talk-footer {
+    color: #8cc4ff;
+  }
+}
+
+
+/* ===== Header en móvil: menos pesado ===== */
+@media (max-width: 640px) {
+  header.site-header {
+    position: static !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #222 !important;
+  }
+}
