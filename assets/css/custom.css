@@ -229,26 +229,7 @@ h1, h2, h3 {
     text-shadow: 0 1px 2px rgba(0,0,0,0.5);
   }
 }
-/* ===== Mejora de contraste para título del header ===== */
-.site-title {
-  color: #f2f2f2 !important;      /* texto más claro */
-  font-weight: 600;               /* ligero realce de peso */
-  text-decoration: none !important;
-}
 
-.site-title:hover {
-  color: #ffffff !important;      /* blanco puro al pasar el mouse */
-}
-
-/* Modo oscuro: mantiene consistencia */
-@media (prefers-color-scheme: dark) {
-  .site-title {
-    color: #e6e6e6 !important;
-  }
-  .site-title:hover {
-    color: #ffffff !important;
-  }
-}
 /* Título largo del header: mantener en una línea si hay espacio */
 .site-title {
   white-space: nowrap;
@@ -397,9 +378,7 @@ h1, h2, h3 {
 
 /* iOS Safari: quita highlight blanco al tocar */
 a { -webkit-tap-highlight-color: rgba(0,0,0,0); }
-@supports (-webkit-touch-callout: none) {
-  header.site-header { background-color: #181818; }
-}
+
 @media (max-width: 560px) {
   .language-switch .label-text { display: none; } /* oculta "Idioma:" / "Language:" */
 }
@@ -909,32 +888,34 @@ hr {
   max-width: 980px;
 }
 /* ============================================
-   🧱 Header limpio: oscuro, sin borde y centrado
+   🧱 Header: se adapta a light / dark y sin tarjeta blanca
    ============================================ */
-/*
-header.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-  background-color: #181818;
-  color: #f5f5f5;
-  border: 0;
-  outline: 0;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.45);
-}
-*/
 
-header.site-header .wrapper {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0.6rem 1rem;
-  background: transparent;
+/* Header en modo claro (por defecto) */
+header.site-header {
+  position: static;                 /* que no sea sticky */
+  top: auto;
+  z-index: 10;
+  background-color: #ffffff;        /* claro, como el footer */
+  color: #222222;
   border: 0;
   outline: 0;
   box-shadow: none;
 }
 
-.header-flex {
+/* El wrapper NO debe tener fondo ni borde de "tarjeta" */
+header.site-header .wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.6rem 1rem;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Layout del contenido del header */
+header.site-header .header-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -942,61 +923,52 @@ header.site-header .wrapper {
   flex-wrap: wrap;
 }
 
-/* Título del sitio */
-.site-title {
+/* Título */
+header.site-header .site-title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: clamp(240px, 60vw, 620px);
   line-height: 1.2;
   font-size: 1.06rem;
-  color: #f2f2f2;
+  color: inherit;
   text-decoration: none;
 }
-
-.site-title:hover {
-  color: #ffffff;
+header.site-header .site-title:hover {
+  color: #000000;
 }
 
-/* Menú principal */
-.site-nav {
+/* Menú */
+header.site-header .site-nav {
   display: flex;
   align-items: center;
   gap: 0.9rem;
   flex-wrap: wrap;
   font-size: 0.95rem;
 }
-
-.site-nav a {
-  color: #4da3ff;
+header.site-header .site-nav a {
+  color: #0066cc;
   font-weight: 500;
   text-decoration: none;
 }
-
-.site-nav a:hover {
-  color: #8cc4ff;
+header.site-header .site-nav a:hover {
   text-decoration: underline;
 }
 
-/* Selector de idioma (tu <span class="language-switch">) */
-.site-header .language-switch {
+/* Selector de idioma */
+header.site-header .language-switch {
   white-space: nowrap;
   font-size: 0.93rem;
-  color: #4da3ff;
+  color: #0066cc;
 }
-
-.site-header .language-switch a {
-  color: #4da3ff;
+header.site-header .language-switch a {
+  color: #0066cc;
 }
-
-.site-header .language-switch a:hover {
-  color: #8cc4ff;
+header.site-header .language-switch a:hover {
   text-decoration: underline;
 }
-
-/* El idioma activo ya lo marcas con <strong> en header.html */
-.site-header .language-switch strong {
-  color: #ffffff;
+header.site-header .language-switch strong {
+  color: #111111;
   font-weight: 700;
 }
 
@@ -1004,120 +976,20 @@ header.site-header .wrapper {
    📱 Versión móvil centrada
    ============================== */
 @media (max-width: 640px) {
-  header.site-header {
-    position: static;         /* en móvil que no sea sticky */
-    box-shadow: none;
-  }
-
   header.site-header .wrapper {
     padding: 0.6rem 1rem;
   }
 
-  .header-flex {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.45rem;
-  }
-
-  .site-title {
-    max-width: 80vw;
-    font-size: 1.02rem;
-  }
-
-  nav.site-nav {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    gap: 0.7rem;
-  }
-
-  .language-switch {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 0.3rem;
-  }
-}
-/* 🔚 Override definitivo del header en móvil:
-   sin tarjeta blanca, fondo oscuro plano y centrado */
-@media (max-width: 768px) {
-  body > header.site-header {
-    position: static !important;           /* que no se pegue arriba */
-    background-color: #181818 !important;  /* mismo fondo que el sitio */
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  body > header.site-header .wrapper {
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0.6rem 1rem !important;
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-  }
-
-  body > header.site-header .header-flex {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 0.45rem;
-  }
-
-  body > header.site-header nav.site-nav {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    gap: 0.7rem;
-  }
-
-  body > header.site-header .language-switch {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 0.3rem;
-  }
-}
-/* 🚑 FIX FINAL HEADER EN MÓVIL + DESKTOP */
-
-/* El header deja de ser sticky y pierde el “tarjetón” blanco */
-header.site-header {
-  position: static !important;              /* que ya no flote encima del contenido */
-  top: auto !important;
-  background-color: #181818 !important;     /* barra oscura */
-  color: #f5f5f5 !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* El wrapper interno es el que el tema hace blanco y con bordes redondeados */
-header.site-header .wrapper {
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding: 0.6rem 1rem !important;
-  background-color: #181818 !important;     /* mismo tono oscuro */
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-}
-
-/* Layout centrado en móvil para que “Home”/“Inicio” no quede pegado a la izquierda */
-@media (max-width: 768px) {
   header.site-header .header-flex {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
     gap: 0.45rem;
+  }
+
+  header.site-header .site-title {
+    max-width: 80vw;
+    font-size: 1.02rem;
   }
 
   header.site-header nav.site-nav {
@@ -1134,3 +1006,40 @@ header.site-header .wrapper {
     gap: 0.3rem;
   }
 }
+
+/* =========================
+   🌙 Modo oscuro del header
+   ========================= */
+@media (prefers-color-scheme: dark) {
+  header.site-header {
+    background-color: #181818;      /* oscuro, igual que el resto del sitio */
+    color: #f5f5f5;
+  }
+
+  header.site-header .site-title:hover {
+    color: #ffffff;
+  }
+
+  header.site-header .site-nav a {
+    color: #4da3ff;
+  }
+  header.site-header .site-nav a:hover {
+    color: #8cc4ff;
+  }
+
+  header.site-header .language-switch,
+  header.site-header .language-switch a {
+    color: #4da3ff;
+  }
+  header.site-header .language-switch strong {
+    color: #ffffff;
+  }
+
+  /* Asegura que el wrapper NO vuelva a ser tarjeta blanca en dark mode */
+  header.site-header .wrapper {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
