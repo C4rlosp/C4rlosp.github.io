@@ -1022,3 +1022,28 @@ header.site-header .divider {
     border-bottom: 1px solid #222 !important;
   }
 }
+/* ===== Fix header en móvil + color de "Idioma" ===== */
+
+/* Fuerza el fondo del header en móvil para que no quede ese bloque blanco */
+@media (max-width: 640px) {
+  header.site-header,
+  header.site-header .wrapper {
+    background-color: #111 !important;  /* mismo tono que el fondo de la página */
+    box-shadow: none !important;
+    border-bottom: 1px solid #222 !important;
+  }
+}
+
+/* "Idioma" con el mismo azul de los demás enlaces del menú */
+.site-header .language-switch,
+.site-header .language-switch .label-text {
+  color: #4da3ff !important;
+}
+
+.site-header .language-switch a {
+  color: #4da3ff !important;
+}
+
+.site-header .language-switch a:hover {
+  color: #8cc4ff !important;
+}
