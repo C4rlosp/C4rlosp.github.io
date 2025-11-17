@@ -53,10 +53,18 @@ h1, h2, h3 {
 .lang-es .lang-es-link,
 .lang-en .lang-en-link {
   font-weight: 700;
-  color: #ffffff !important;  /* activo en blanco, compatible con header oscuro */
+  color: #111111;   /* visible en header claro */
   pointer-events: none;
   text-decoration: none;
   cursor: default;
+}
+
+/* En modo oscuro sí lo ponemos blanco */
+@media (prefers-color-scheme: dark) {
+  .lang-es .lang-es-link,
+  .lang-en .lang-en-link {
+    color: #ffffff;
+  }
 }
 
 /* Ajustes responsive suaves */
