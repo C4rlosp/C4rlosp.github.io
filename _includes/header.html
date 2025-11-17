@@ -9,7 +9,7 @@
       <span class="title-short">Carlos Pérez&nbsp;|&nbsp;NetEng Notes</span>
     </a>
 
-    <!-- Botón hamburguesa (solo aparece en móvil por CSS) -->
+    <!-- Botón hamburguesa (solo en móvil por CSS) -->
     <button class="menu-toggle" type="button"
             aria-label="Toggle navigation"
             aria-expanded="false"
@@ -21,37 +21,43 @@
 
     <!-- Navegación principal -->
     <nav id="main-nav" class="site-nav">
+
       <!-- Inicio -->
       <a href="{% if page.lang == 'en' %}{{ '/index-en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
         {% if page.lang == 'en' %}Home{% else %}Inicio{% endif %}
       </a>
-    <!-- Artículos -->
-      <a href="{% if page.lang == 'en' %}{{ '/articles-en/' | relative_url }}{% else %}{{ '/articulos/' | relative_url }}{% endif %}">
-        {% if page.lang == 'en' %}Articles{% else %}Artículos{% endif %}
-      </a>
-    <!-- Proyectos -->
-      <a href="{% if page.lang == 'en' %}{{ '/projects-en/' | relative_url }}{% else %}{{ '/proyectos/' | relative_url }}{% endif %}">
-        {% if page.lang == 'en' %}Projects{% else %}Proyectos{% endif %}
-      </a>
-    <!-- Charlas -->
-      <a href="{% if page.lang == 'en' %}{{ '/talks-en/' | relative_url }}{% else %}{{ '/charlas/' | relative_url }}{% endif %}">
-        {% if page.lang == 'en' %}Talks{% else %}Charlas{% endif %}
+
+      <!-- Proyectos -->
+      <a href="{% if page.lang == 'en' %}{{ '/en/projects/' | relative_url }}{% else %}{{ '/projects/' | relative_url }}{% endif %}">
+        🧩 {% if page.lang == 'en' %}Projects{% else %}Proyectos{% endif %}
       </a>
 
-      <!-- Separador -->
+      <!-- Charlas -->
+      <a href="{% if page.lang == 'en' %}{{ '/en/talks/' | relative_url }}{% else %}{{ '/talks/' | relative_url }}{% endif %}">
+        🎤 {% if page.lang == 'en' %}Talks{% else %}Charlas{% endif %}
+      </a>
+
+      <!-- Sobre mí / About -->
+      <a href="{% if page.lang == 'en' %}{{ '/about-en/' | relative_url }}{% else %}{{ '/about/' | relative_url }}{% endif %}">
+        {% if page.lang == 'en' %}About{% else %}Sobre mí{% endif %}
+      </a>
+
       <span class="divider"></span>
 
       <!-- Selector de idioma -->
       <span class="language-switch">
-        {% if page.lang == 'en' %}
-          <a href="{{ page.alt_lang_url | relative_url }}" class="lang-es-link">ES</a> ·
+        {% if page.lang == 'es' %}
+          <strong class="lang-es-link">ES</strong> ·
+          <a href="{{ page.alt_lang_url | default: '/index-en/' | relative_url }}" class="lang-en-link">EN</a>
+        {% elsif page.lang == 'en' %}
+          <a href="{{ page.alt_lang_url | default: '/' | relative_url }}" class="lang-es-link">ES</a> ·
           <strong class="lang-en-link">EN</strong>
         {% else %}
-          <strong class="lang-es-link">ES</strong> ·
-          <a href="{{ page.alt_lang_url | relative_url }}" class="lang-en-link">EN</a>
+          <a href="{{ '/' | relative_url }}">ES</a> ·
+          <a href="{{ '/index-en/' | relative_url }}">EN</a>
         {% endif %}
       </span>
-    </nav>
 
+    </nav>
   </div>
 </header>
