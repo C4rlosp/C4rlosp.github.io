@@ -1053,43 +1053,41 @@ header.site-header .language-switch strong {
   }
 }
 /* ===========================
-   🍔 Menú hamburguesa simple
+   🍔 Botón hamburguesa elegante
    =========================== */
-
-/* Botón hamburguesa: oculto en desktop */
 .menu-toggle {
   display: none;
   border: none;
   background: transparent;
   cursor: pointer;
-  padding: 0.25rem;
+  padding: 0.4rem;
   margin-left: auto;
-  color: inherit;
 }
 
-/* Líneas del icono */
 .menu-toggle span {
   display: block;
-  width: 22px;
+  width: 20px;
   height: 2px;
   background: currentColor;
-  border-radius: 999px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 .menu-toggle span + span {
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
-/* Estado "abierto" → icono X */
+/* Estado abierto → forma una X perfecta */
 .menu-toggle.is-open span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(6px) rotate(45deg);
 }
+
 .menu-toggle.is-open span:nth-child(2) {
   opacity: 0;
 }
+
 .menu-toggle.is-open span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 /* ===========================
@@ -1112,6 +1110,18 @@ header.site-header .language-switch strong {
   header.site-header .header-flex {
     align-items: center;
   }
+  @media (max-width: 768px) {
+  /* Header actúa como contenedor del menú desplegable */
+  header.site-header {
+    position: relative;
+  }
+
+  /* Mostrar botón hamburguesa en móvil */
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   /* Menú colapsado por defecto */
   header.site-header .site-nav {
@@ -1129,6 +1139,19 @@ header.site-header .language-switch strong {
     z-index: 20;
   }
 
+  /* Ajuste del espaciado en el menú móvil */
+  header.site-header .site-nav a {
+    padding: 0.35rem 0 !important;
+    margin: 0 !important;
+    font-size: 1rem;
+  }
+
+  header.site-header .language-switch {
+    padding: 0.35rem 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Ancho completo y alineación a la izquierda */
   header.site-header .site-nav a,
   header.site-header .language-switch {
     width: 100%;
@@ -1144,7 +1167,7 @@ header.site-header .language-switch strong {
     display: flex;
   }
 }
-
+  
 /* Dark mode: fondo consistente del menú desplegado en móvil */
 @media (prefers-color-scheme: dark) {
   @media (max-width: 768px) {
