@@ -25,15 +25,15 @@
       <a href="{% if page.lang == 'en' %}{{ '/index-en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">
         {% if page.lang == 'en' %}Home{% else %}Inicio{% endif %}
       </a>
-
+    <!-- Artículos -->
       <a href="{% if page.lang == 'en' %}{{ '/articles-en/' | relative_url }}{% else %}{{ '/articulos/' | relative_url }}{% endif %}">
         {% if page.lang == 'en' %}Articles{% else %}Artículos{% endif %}
       </a>
-
+    <!-- Proyectos -->
       <a href="{% if page.lang == 'en' %}{{ '/projects-en/' | relative_url }}{% else %}{{ '/proyectos/' | relative_url }}{% endif %}">
         {% if page.lang == 'en' %}Projects{% else %}Proyectos{% endif %}
       </a>
-
+    <!-- Charlas -->
       <a href="{% if page.lang == 'en' %}{{ '/talks-en/' | relative_url }}{% else %}{{ '/charlas/' | relative_url }}{% endif %}">
         {% if page.lang == 'en' %}Talks{% else %}Charlas{% endif %}
       </a>
