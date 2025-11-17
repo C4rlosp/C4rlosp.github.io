@@ -1056,13 +1056,13 @@ header.site-header .language-switch strong {
    🍔 Botón hamburguesa elegante
    =========================== */
 .menu-toggle {
-  display: none;
+  display: none;              /* oculto por defecto en desktop */
   border: none;
   background: transparent;
   cursor: pointer;
   padding: 0.4rem;
   margin-left: auto;
-  color: #111111;     /* 👈 líneas negras / gris oscuro */
+  color: #111111;             /* líneas negras / gris oscuro */
 }
 
 .menu-toggle span {
@@ -1074,19 +1074,18 @@ header.site-header .language-switch strong {
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
+/* ya no necesitamos margin-top si usamos gap */
 .menu-toggle span + span {
-  margin-top: 4px;
+  margin-top: 0;
 }
 
-/* Estado abierto → forma una X perfecta */
+/* Estado abierto → forma una X */
 .menu-toggle.is-open span:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
 }
-
 .menu-toggle.is-open span:nth-child(2) {
   opacity: 0;
 }
-
 .menu-toggle.is-open span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
 }
@@ -1098,12 +1097,14 @@ header.site-header .language-switch strong {
   }
 }
 
-/* Móvil: botoncito suave estilo dominios.cr */
+/* 📱 Móvil: mostramos el botón y apilamos las rayas */
 @media (max-width: 768px) {
   .menu-toggle {
     display: inline-flex;
-    align-items: center;
+    flex-direction: column;          /* 👈 apila los spans */
     justify-content: center;
+    align-items: center;
+    gap: 4px;                        /* separación vertical entre líneas */
     background-color: #f2f2f2;
     border-radius: 10px;
   }
