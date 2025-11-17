@@ -1072,3 +1072,50 @@ header.site-header {
     background-color: #111111 !important;
   }
 }
+/* 🚫 Quitar el marco/blanco alrededor del header */
+
+header.site-header,
+header.site-header .wrapper,
+header.site-header .header-flex {
+  border: none !important;
+  outline: none !important;
+}
+
+/* En caso de que el tema meta bordes arriba/abajo */
+header.site-header {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* En móvil, sin sombras para evitar el efecto "tarjeta" */
+@media (max-width: 640px) {
+  header.site-header {
+    box-shadow: none !important;
+  }
+}
+/* ⭐ Mejor alineación del menú en móvil */
+@media (max-width: 640px) {
+  /* Centrar el contenedor del menú */
+  .site-nav {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Centrar cada enlace */
+  .site-nav a {
+    text-align: center;
+  }
+
+  /* Centrar el selector de idioma también */
+  .language-switch {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Quitar alineación dura a la izquierda del header-flex */
+  .header-flex {
+    justify-content: center;
+  }
+}
