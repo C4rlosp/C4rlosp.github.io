@@ -44,8 +44,14 @@
 
       <span class="divider"></span>
 
-      <!-- Selector de idioma -->
+     <!-- Selector de idioma -->
       <span class="language-switch">
+        {% if page.lang == 'en' %}
+          🌐 Language:
+        {% else %}
+          🌐 Idioma:
+        {% endif %}
+
         {% if page.lang == 'es' %}
           <strong class="lang-es-link">ES</strong> ·
           <a href="{{ page.alt_lang_url | default: '/index-en/' | relative_url }}" class="lang-en-link">EN</a>
