@@ -291,35 +291,35 @@ h1, h2, h3 {
     color: #b8dcff;
   }
 }
-/* ================================
-   Footer link consistency & hover
-   ================================ */
+/* ===== Footer links: estilo consistente con el header ===== */
 .site-footer a,
 .site-footer a svg path {
-  color: #8cc4ff;
-  fill: #8cc4ff;
+  color: #0077cc;   /* mismo azul del header */
+  fill: #0077cc;
   transition: color 0.25s ease, fill 0.25s ease;
 }
 
 .site-footer a:hover,
 .site-footer a:hover svg path {
-  color: #b8dcff;
-  fill: #b8dcff;
+  color: #005fa3;   /* hover elegante */
+  fill: #005fa3;
 }
 
-/* En dark mode, mejor contraste */
+/* Modo oscuro */
 @media (prefers-color-scheme: dark) {
   .site-footer a,
   .site-footer a svg path {
-    color: #8cc4ff;
+    color: #8cc4ff;   /* azul claro legible */
     fill: #8cc4ff;
   }
+
   .site-footer a:hover,
   .site-footer a:hover svg path {
     color: #b8dcff;
     fill: #b8dcff;
   }
 }
+
 /* Normalizar espaciado H1 + subtítulo (blockquote) en hero */
 .page-content h1 {
   margin-top: 0.4rem;
