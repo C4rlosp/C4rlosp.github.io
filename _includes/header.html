@@ -44,25 +44,17 @@
 
       <span class="divider"></span>
 
-     <!-- Selector de idioma -->
-      <span class="language-switch">
-        {% if page.lang == 'en' %}
-          🌐 Language:
-        {% else %}
-          🌐 Idioma:
-        {% endif %}
+<!-- Selector de idioma -->
+<span class="language-switch">
+  {% if page.lang == 'en' %}
+    🌐 Language:
+    <a href="{{ page.alt_lang_url | default: '/' | relative_url }}" class="lang-switch-link">ES</a>
+  {% else %}
+    🌐 Idioma:
+    <a href="{{ page.alt_lang_url | default: '/index-en/' | relative_url }}" class="lang-switch-link">EN</a>
+  {% endif %}
+</span>
 
-        {% if page.lang == 'es' %}
-          <strong class="lang-es-link">ES</strong> ·
-          <a href="{{ page.alt_lang_url | default: '/index-en/' | relative_url }}" class="lang-en-link">EN</a>
-        {% elsif page.lang == 'en' %}
-          <a href="{{ page.alt_lang_url | default: '/' | relative_url }}" class="lang-es-link">ES</a> ·
-          <strong class="lang-en-link">EN</strong>
-        {% else %}
-          <a href="{{ '/' | relative_url }}">ES</a> ·
-          <a href="{{ '/index-en/' | relative_url }}">EN</a>
-        {% endif %}
-      </span>
 
     </nav>
   </div>
