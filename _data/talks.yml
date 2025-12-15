@@ -107,25 +107,45 @@
   image: "/images/talks/lacnic.jpg"
   description: "Participation representing NIC Costa Rica and CRIX in technical sessions about BGP, RPKI validation and IXP operations."
   published: true
+# ===== END TALK =====
 
-# ===== FUTURE EVENT: EURO-IX 43 =====
-# - id: euroix43
-#   lang: es
-#   event: "Euro-IX 43 – Madrid"
-#   title: "Lightning Talk: Building Trust and Local Value – The CRIX Experience"
-#   date: "2025-12"
-#   location: "Madrid, España"
-#   image: "/images/talks/euroix43.jpg"
-#   description: "Presentación oficial..."
-#   published: false
-#
-# - id: euroix43-en
-#   lang: en
-#   event: "Euro-IX 43 – Madrid"
-#   title: "Lightning Talk: Building Trust and Local Value – The CRIX Experience"
-#   date: "2025-12"
-#   location: "Madrid, Spain"
-#   image: "/images/talks/euroix43.jpg"
-#   description: "Official CRIX presentation..."
-#   published: false
-# ===== END FUTURE EVENT =====
+# ============================
+# EURO-IX 43 — EN
+# ============================
+- id: euroix43
+  lang: es
+  event: "Euro-IX 43 – Madrid"
+  title: "Lightning Talk: Building Trust and Local Value – The CRIX Experience"
+  date: "2025-12"
+  location: "Madrid, España"
+  image: "/images/talks/euroix43.jpg"
+  description: >
+    Lightning Talk presentada en Euro-IX 43 (Madrid), donde compartí la experiencia
+    del Costa Rica Internet Exchange (CRIX) en la construcción de confianza,
+    fortalecimiento del ecosistema local y generación de valor regional.
+    La charla abordó los retos y aprendizajes en el desarrollo de un IXP en
+    Centroamérica, así como el rol de la cooperación y la comunidad técnica
+    para impulsar la interconexión y el crecimiento sostenible.
+  published: true
+# ===== END TALK =====
+
+
+# ============================
+# EURO-IX 43 — EN
+# ============================
+- id: euroix43-en
+  lang: en
+  event: "Euro-IX 43 – Madrid"
+  title: "Lightning Talk: Building Trust and Local Value – The CRIX Experience"
+  date: "2025-12"
+  location: "Madrid, Spain"
+  image: "/images/talks/euroix43.jpg"
+  description: >
+    Lightning Talk delivered at Euro-IX 43 (Madrid), sharing the experience of
+    the Costa Rica Internet Exchange (CRIX) in building trust, strengthening
+    the local ecosystem, and creating regional value.
+    The talk highlighted key challenges and lessons learned from developing
+    an IXP in Central America, emphasizing the importance of collaboration
+    and the technical community in fostering interconnection and sustainable growth.
+  published: true
+# ===== END TALK =====
